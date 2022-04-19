@@ -9,6 +9,11 @@
 import UIKit
 
 class ThirdViewController: UIViewController {
+    
+    override func loadView() {
+        super.loadView()
+        view.backgroundColor = .yellow
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()

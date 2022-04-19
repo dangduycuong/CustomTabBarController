@@ -9,11 +9,20 @@
 import UIKit
 
 class SecondViewController: UIViewController {
+    
+    override func loadView() {
+        super.loadView()
+        prepareForDisplay()
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+    }
+    
+    private func prepareForDisplay() {
+        view.backgroundColor = .white
     }
     
 

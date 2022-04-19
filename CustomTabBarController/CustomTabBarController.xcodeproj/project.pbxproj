@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C3E5C23746BAFB19C92520E /* Pods_CustomTabBarController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53E5313E26C561220D774B79 /* Pods_CustomTabBarController.framework */; };
 		537BDA4223C43B8C001EF4B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537BDA4123C43B8C001EF4B3 /* AppDelegate.swift */; };
 		537BDA4423C43B8C001EF4B3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537BDA4323C43B8C001EF4B3 /* HomeViewController.swift */; };
 		537BDA4723C43B8C001EF4B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 537BDA4523C43B8C001EF4B3 /* Main.storyboard */; };
@@ -16,11 +17,22 @@
 		537BDA5823C43D90001EF4B3 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537BDA5723C43D90001EF4B3 /* SecondViewController.swift */; };
 		537BDA5A23C43D9F001EF4B3 /* ActionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537BDA5923C43D9F001EF4B3 /* ActionViewController.swift */; };
 		537BDA5C23C43DAF001EF4B3 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537BDA5B23C43DAF001EF4B3 /* ThirdViewController.swift */; };
-		537BDA5E23C43DBD001EF4B3 /* FourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537BDA5D23C43DBD001EF4B3 /* FourthViewController.swift */; };
 		537BDA6023C44412001EF4B3 /* MasterTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537BDA5F23C44412001EF4B3 /* MasterTabBarController.swift */; };
+		ACF41A8E280EB206001B9B10 /* Data+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF41A8D280EB206001B9B10 /* Data+Extension.swift */; };
+		ACF41A92280EB268001B9B10 /* Weather.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACF41A91280EB268001B9B10 /* Weather.storyboard */; };
+		ACF41A94280EB2B9001B9B10 /* Storyboard+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF41A93280EB2B9001B9B10 /* Storyboard+Extension.swift */; };
+		ACF41A97280EB365001B9B10 /* Identifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF41A96280EB365001B9B10 /* Identifier.swift */; };
+		ACF41A9E280EB438001B9B10 /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF41A9D280EB438001B9B10 /* WeatherViewController.swift */; };
+		ACF41AA2280EB462001B9B10 /* WeatherTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF41AA0280EB462001B9B10 /* WeatherTableViewCell.swift */; };
+		ACF41AA3280EB462001B9B10 /* WeatherTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACF41AA1280EB462001B9B10 /* WeatherTableViewCell.xib */; };
+		ACF41AA5280EB49B001B9B10 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF41AA4280EB49B001B9B10 /* UITableView+Extension.swift */; };
+		ACF41AA7280EB55B001B9B10 /* WeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF41AA6280EB55B001B9B10 /* WeatherViewModel.swift */; };
+		ACF41AAA280EB892001B9B10 /* IPLookupAPIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF41AA9280EB892001B9B10 /* IPLookupAPIModel.swift */; };
+		ACF41AAC280EBDF0001B9B10 /* ForecastWeatherAPIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF41AAB280EBDF0001B9B10 /* ForecastWeatherAPIModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4DBA3A3863333D79F9D1A192 /* Pods-CustomTabBarController.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomTabBarController.debug.xcconfig"; path = "Target Support Files/Pods-CustomTabBarController/Pods-CustomTabBarController.debug.xcconfig"; sourceTree = "<group>"; };
 		537BDA3E23C43B8C001EF4B3 /* CustomTabBarController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomTabBarController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		537BDA4123C43B8C001EF4B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		537BDA4323C43B8C001EF4B3 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -32,8 +44,20 @@
 		537BDA5723C43D90001EF4B3 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		537BDA5923C43D9F001EF4B3 /* ActionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionViewController.swift; sourceTree = "<group>"; };
 		537BDA5B23C43DAF001EF4B3 /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
-		537BDA5D23C43DBD001EF4B3 /* FourthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthViewController.swift; sourceTree = "<group>"; };
 		537BDA5F23C44412001EF4B3 /* MasterTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterTabBarController.swift; sourceTree = "<group>"; };
+		53E5313E26C561220D774B79 /* Pods_CustomTabBarController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CustomTabBarController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		69500D837915D80DD5AFFDCD /* Pods-CustomTabBarController.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomTabBarController.release.xcconfig"; path = "Target Support Files/Pods-CustomTabBarController/Pods-CustomTabBarController.release.xcconfig"; sourceTree = "<group>"; };
+		ACF41A8D280EB206001B9B10 /* Data+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Extension.swift"; sourceTree = "<group>"; };
+		ACF41A91280EB268001B9B10 /* Weather.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Weather.storyboard; sourceTree = "<group>"; };
+		ACF41A93280EB2B9001B9B10 /* Storyboard+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Storyboard+Extension.swift"; sourceTree = "<group>"; };
+		ACF41A96280EB365001B9B10 /* Identifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifier.swift; sourceTree = "<group>"; };
+		ACF41A9D280EB438001B9B10 /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
+		ACF41AA0280EB462001B9B10 /* WeatherTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherTableViewCell.swift; sourceTree = "<group>"; };
+		ACF41AA1280EB462001B9B10 /* WeatherTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WeatherTableViewCell.xib; sourceTree = "<group>"; };
+		ACF41AA4280EB49B001B9B10 /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
+		ACF41AA6280EB55B001B9B10 /* WeatherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewModel.swift; sourceTree = "<group>"; };
+		ACF41AA9280EB892001B9B10 /* IPLookupAPIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPLookupAPIModel.swift; sourceTree = "<group>"; };
+		ACF41AAB280EBDF0001B9B10 /* ForecastWeatherAPIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastWeatherAPIModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C3E5C23746BAFB19C92520E /* Pods_CustomTabBarController.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,6 +77,8 @@
 			children = (
 				537BDA4023C43B8C001EF4B3 /* CustomTabBarController */,
 				537BDA3F23C43B8C001EF4B3 /* Products */,
+				DD89AE29CB39A69432D0FAB6 /* Pods */,
+				F17B79AFFB76D268F3D2A30E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -66,11 +93,13 @@
 		537BDA4023C43B8C001EF4B3 /* CustomTabBarController */ = {
 			isa = PBXGroup;
 			children = (
+				ACF41A98280EB3E1001B9B10 /* Modules */,
+				ACF41A8F280EB24F001B9B10 /* Resource */,
+				ACF41A8B280EB1EA001B9B10 /* Shared */,
 				537BDA4123C43B8C001EF4B3 /* AppDelegate.swift */,
 				537BDA4323C43B8C001EF4B3 /* HomeViewController.swift */,
 				537BDA5523C43BCF001EF4B3 /* CustomTabBarController.swift */,
 				537BDA5F23C44412001EF4B3 /* MasterTabBarController.swift */,
-				537BDA5D23C43DBD001EF4B3 /* FourthViewController.swift */,
 				537BDA5B23C43DAF001EF4B3 /* ThirdViewController.swift */,
 				537BDA5923C43D9F001EF4B3 /* ActionViewController.swift */,
 				537BDA5723C43D90001EF4B3 /* SecondViewController.swift */,
@@ -82,6 +111,127 @@
 			path = CustomTabBarController;
 			sourceTree = "<group>";
 		};
+		ACF41A8B280EB1EA001B9B10 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				ACF41A8C280EB1F2001B9B10 /* Extension */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		ACF41A8C280EB1F2001B9B10 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				ACF41A95280EB353001B9B10 /* Identifier */,
+				ACF41A8D280EB206001B9B10 /* Data+Extension.swift */,
+				ACF41A93280EB2B9001B9B10 /* Storyboard+Extension.swift */,
+				ACF41AA4280EB49B001B9B10 /* UITableView+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		ACF41A8F280EB24F001B9B10 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				ACF41A90280EB257001B9B10 /* Storyboard */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		ACF41A90280EB257001B9B10 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				ACF41A91280EB268001B9B10 /* Weather.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		ACF41A95280EB353001B9B10 /* Identifier */ = {
+			isa = PBXGroup;
+			children = (
+				ACF41A96280EB365001B9B10 /* Identifier.swift */,
+			);
+			path = Identifier;
+			sourceTree = "<group>";
+		};
+		ACF41A98280EB3E1001B9B10 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				ACF41A99280EB3ED001B9B10 /* Weather */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		ACF41A99280EB3ED001B9B10 /* Weather */ = {
+			isa = PBXGroup;
+			children = (
+				ACF41AA8280EB889001B9B10 /* Model */,
+				ACF41A9C280EB408001B9B10 /* View */,
+				ACF41A9B280EB3FF001B9B10 /* Controller */,
+				ACF41A9A280EB3F5001B9B10 /* ViewModel */,
+			);
+			path = Weather;
+			sourceTree = "<group>";
+		};
+		ACF41A9A280EB3F5001B9B10 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				ACF41AA6280EB55B001B9B10 /* WeatherViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		ACF41A9B280EB3FF001B9B10 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				ACF41A9D280EB438001B9B10 /* WeatherViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		ACF41A9C280EB408001B9B10 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				ACF41A9F280EB449001B9B10 /* WeatherTableViewCell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		ACF41A9F280EB449001B9B10 /* WeatherTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				ACF41AA0280EB462001B9B10 /* WeatherTableViewCell.swift */,
+				ACF41AA1280EB462001B9B10 /* WeatherTableViewCell.xib */,
+			);
+			path = WeatherTableViewCell;
+			sourceTree = "<group>";
+		};
+		ACF41AA8280EB889001B9B10 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				ACF41AA9280EB892001B9B10 /* IPLookupAPIModel.swift */,
+				ACF41AAB280EBDF0001B9B10 /* ForecastWeatherAPIModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DD89AE29CB39A69432D0FAB6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4DBA3A3863333D79F9D1A192 /* Pods-CustomTabBarController.debug.xcconfig */,
+				69500D837915D80DD5AFFDCD /* Pods-CustomTabBarController.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F17B79AFFB76D268F3D2A30E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				53E5313E26C561220D774B79 /* Pods_CustomTabBarController.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -89,9 +239,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 537BDA5023C43B8D001EF4B3 /* Build configuration list for PBXNativeTarget "CustomTabBarController" */;
 			buildPhases = (
+				73F551CB588FDD08B33C6E92 /* [CP] Check Pods Manifest.lock */,
 				537BDA3A23C43B8C001EF4B3 /* Sources */,
 				537BDA3B23C43B8C001EF4B3 /* Frameworks */,
 				537BDA3C23C43B8C001EF4B3 /* Resources */,
+				E1B31616F43C14C6771A0D8E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -141,6 +293,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				537BDA4C23C43B8D001EF4B3 /* LaunchScreen.storyboard in Resources */,
+				ACF41A92280EB268001B9B10 /* Weather.storyboard in Resources */,
+				ACF41AA3280EB462001B9B10 /* WeatherTableViewCell.xib in Resources */,
 				537BDA4923C43B8D001EF4B3 /* Assets.xcassets in Resources */,
 				537BDA4723C43B8C001EF4B3 /* Main.storyboard in Resources */,
 			);
@@ -148,19 +302,69 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		73F551CB588FDD08B33C6E92 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CustomTabBarController-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E1B31616F43C14C6771A0D8E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CustomTabBarController/Pods-CustomTabBarController-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CustomTabBarController/Pods-CustomTabBarController-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CustomTabBarController/Pods-CustomTabBarController-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		537BDA3A23C43B8C001EF4B3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACF41AA2280EB462001B9B10 /* WeatherTableViewCell.swift in Sources */,
 				537BDA5823C43D90001EF4B3 /* SecondViewController.swift in Sources */,
 				537BDA5A23C43D9F001EF4B3 /* ActionViewController.swift in Sources */,
+				ACF41AA7280EB55B001B9B10 /* WeatherViewModel.swift in Sources */,
 				537BDA4423C43B8C001EF4B3 /* HomeViewController.swift in Sources */,
 				537BDA6023C44412001EF4B3 /* MasterTabBarController.swift in Sources */,
-				537BDA5E23C43DBD001EF4B3 /* FourthViewController.swift in Sources */,
+				ACF41A97280EB365001B9B10 /* Identifier.swift in Sources */,
 				537BDA4223C43B8C001EF4B3 /* AppDelegate.swift in Sources */,
 				537BDA5C23C43DAF001EF4B3 /* ThirdViewController.swift in Sources */,
 				537BDA5623C43BCF001EF4B3 /* CustomTabBarController.swift in Sources */,
+				ACF41AAC280EBDF0001B9B10 /* ForecastWeatherAPIModel.swift in Sources */,
+				ACF41A94280EB2B9001B9B10 /* Storyboard+Extension.swift in Sources */,
+				ACF41A8E280EB206001B9B10 /* Data+Extension.swift in Sources */,
+				ACF41AAA280EB892001B9B10 /* IPLookupAPIModel.swift in Sources */,
+				ACF41A9E280EB438001B9B10 /* WeatherViewController.swift in Sources */,
+				ACF41AA5280EB49B001B9B10 /* UITableView+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,6 +508,7 @@
 		};
 		537BDA5123C43B8D001EF4B3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4DBA3A3863333D79F9D1A192 /* Pods-CustomTabBarController.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -321,6 +526,7 @@
 		};
 		537BDA5223C43B8D001EF4B3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 69500D837915D80DD5AFFDCD /* Pods-CustomTabBarController.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

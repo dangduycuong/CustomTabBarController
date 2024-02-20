@@ -44,6 +44,11 @@ class WeatherViewController: BaseViewController {
         //
         //        }
         
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
         viewModel.fetchForecastWeather { [weak self] in
             guard let `self` = self else { return }
             if let icon = self.viewModel.forecastWeather?.current?.condition?.icon {
@@ -58,7 +63,7 @@ class WeatherViewController: BaseViewController {
     }
     
     private func updateUI() {
-        DispatchQueue.main.async {
+        DispatchQueue.main.async() {
             if let country = self.viewModel.forecastWeather?.location?.country,
                let name = self.viewModel.forecastWeather?.location?.name {
                 self.locationLabel.text = country + " - " + name
@@ -67,6 +72,7 @@ class WeatherViewController: BaseViewController {
             if let lastUpdated = self.viewModel.forecastWeather?.current?.lastUpdated {
                 self.lastUpdatedLabel.text = lastUpdated
             }
+            self.stopAnimating()
         }
         
     }

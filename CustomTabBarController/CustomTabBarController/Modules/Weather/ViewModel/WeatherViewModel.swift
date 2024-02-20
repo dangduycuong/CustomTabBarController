@@ -52,6 +52,7 @@ class WeatherViewModel {
     
     
     func fetchForecastWeather(completed: @escaping(() -> Void)) {
+        Utils.showLoadingIndicator(nil, true)
         let urlQueryItems = [
             URLQueryItem(name: "q", value: "hanoi"),
             URLQueryItem(name: "days", value: "3"),
@@ -81,6 +82,7 @@ class WeatherViewModel {
             do {
                 let json = try JSONDecoder().decode(ForecastWeatherAPIModel.self, from: data)
                 self.forecastWeather = json
+                Utils.hideLoadingIndicator()
                 completed()
             } catch let error {
                 print("decode error: ", error)
@@ -111,6 +113,7 @@ class WeatherViewModel {
             print("Header: ", request.allHTTPHeaderFields as Any)
             
             if let data = data {
+                Utils.hideLoadingIndicator()
                 completed(data)
             }
             if let error = error {

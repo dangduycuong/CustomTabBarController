@@ -37,6 +37,7 @@
 		FAF04FAE280EFAFA00F7E27F /* TodoInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF04FAD280EFAFA00F7E27F /* TodoInfoViewModel.swift */; };
 		FAF04FB0280EFF5500F7E27F /* HomeTodosViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF04FAF280EFF5500F7E27F /* HomeTodosViewModel.swift */; };
 		FAF9982D2B84FC0900FA40E8 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF9982C2B84FC0900FA40E8 /* BaseViewController.swift */; };
+		FAF998302B8520CE00FA40E8 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF9982F2B8520CE00FA40E8 /* Utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,6 +76,7 @@
 		FAF04FAF280EFF5500F7E27F /* HomeTodosViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTodosViewModel.swift; sourceTree = "<group>"; };
 		FAF9982B2B84F91700FA40E8 /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
 		FAF9982C2B84FC0900FA40E8 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		FAF9982F2B8520CE00FA40E8 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,7 @@
 		ACF41A8B280EB1EA001B9B10 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				FAF9982E2B8520C400FA40E8 /* Utils */,
 				FAF04F9F280EDC7D00F7E27F /* Base */,
 				ACF41A8C280EB1F2001B9B10 /* Extension */,
 			);
@@ -338,6 +341,14 @@
 			path = Configuration;
 			sourceTree = "<group>";
 		};
+		FAF9982E2B8520C400FA40E8 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				FAF9982F2B8520CE00FA40E8 /* Utils.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -479,6 +490,7 @@
 				ACF41AAA280EB892001B9B10 /* IPLookupAPIModel.swift in Sources */,
 				ACF41A9E280EB438001B9B10 /* WeatherViewController.swift in Sources */,
 				ACF41AA5280EB49B001B9B10 /* UITableView+Extension.swift in Sources */,
+				FAF998302B8520CE00FA40E8 /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

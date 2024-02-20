@@ -12,34 +12,30 @@
 //   let forecastWeatherAPIModel = try? newJSONDecoder().decode(ForecastWeatherAPIModel.self, from: jsonData)
 
 import Foundation
-// This file was generated from JSON Schema using quicktype, do not modify it directly.
-// To parse the JSON, add this file to your project and do:
-//
-//   let forecastWeatherAPIModel = try? newJSONDecoder().decode(ForecastWeatherAPIModel.self, from: jsonData)
 
-import Foundation
-
-// MARK: - ForecastWeatherAPIModel
+// MARK: - PoemModel
 struct ForecastWeatherAPIModel: Codable {
-    let location: Location?
-    let current: Current?
+    var location: Location?
+    var current: Current?
 }
 
 // MARK: - Current
 struct Current: Codable {
-    let lastUpdatedEpoch: Int?
-    let lastUpdated: String?
-    let tempC, tempF, isDay: Int?
-    let condition: Condition?
-    let windMph: Double?
-    let windKph, windDegree: Int?
-    let windDir: String?
-    let pressureMB: Int?
-    let pressureIn: Double?
-    let precipMm, precipIn, humidity, cloud: Int?
-    let feelslikeC, feelslikeF: Double?
-    let visKM, visMiles, uv: Int?
-    let gustMph, gustKph: Double?
+    var lastUpdatedEpoch: Int?
+    var lastUpdated: String?
+    var tempC: Int?
+    var tempF: Double?
+    var isDay: Int?
+    var condition: Condition?
+    var windMph, windKph: Double?
+    var windDegree: Int?
+    var windDir: String?
+    var pressureMB: Int?
+    var pressureIn: Double?
+    var precipMm, precipIn, humidity, cloud: Int?
+    var feelslikeC, feelslikeF: Double?
+    var visKM, visMiles, uv: Int?
+    var gustMph, gustKph: Double?
     
     enum CodingKeys: String, CodingKey {
         case lastUpdatedEpoch = "last_updated_epoch"
@@ -69,17 +65,17 @@ struct Current: Codable {
 
 // MARK: - Condition
 struct Condition: Codable {
-    let text, icon: String?
-    let code: Int?
+    var text, icon: String?
+    var code: Int?
 }
 
 // MARK: - Location
 struct Location: Codable {
-    let name, region, country: String?
-    let lat, lon: Double?
-    let tzID: String?
-    let localtimeEpoch: Int?
-    let localtime: String?
+    var name, region, country: String?
+    var lat, lon: Double?
+    var tzID: String?
+    var localtimeEpoch: Int?
+    var localtime: String?
     
     enum CodingKeys: String, CodingKey {
         case name, region, country, lat, lon

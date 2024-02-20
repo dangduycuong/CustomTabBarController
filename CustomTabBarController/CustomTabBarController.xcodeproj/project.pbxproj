@@ -3,23 +3,20 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		3C3E5C23746BAFB19C92520E /* Pods_CustomTabBarController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53E5313E26C561220D774B79 /* Pods_CustomTabBarController.framework */; };
 		537BDA4223C43B8C001EF4B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537BDA4123C43B8C001EF4B3 /* AppDelegate.swift */; };
-		537BDA4423C43B8C001EF4B3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537BDA4323C43B8C001EF4B3 /* HomeViewController.swift */; };
 		537BDA4723C43B8C001EF4B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 537BDA4523C43B8C001EF4B3 /* Main.storyboard */; };
 		537BDA4923C43B8D001EF4B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 537BDA4823C43B8D001EF4B3 /* Assets.xcassets */; };
 		537BDA4C23C43B8D001EF4B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 537BDA4A23C43B8D001EF4B3 /* LaunchScreen.storyboard */; };
-		537BDA5623C43BCF001EF4B3 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537BDA5523C43BCF001EF4B3 /* CustomTabBarController.swift */; };
 		537BDA5823C43D90001EF4B3 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537BDA5723C43D90001EF4B3 /* SecondViewController.swift */; };
 		537BDA5A23C43D9F001EF4B3 /* ActionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537BDA5923C43D9F001EF4B3 /* ActionViewController.swift */; };
 		537BDA5C23C43DAF001EF4B3 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537BDA5B23C43DAF001EF4B3 /* ThirdViewController.swift */; };
 		537BDA6023C44412001EF4B3 /* MasterTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537BDA5F23C44412001EF4B3 /* MasterTabBarController.swift */; };
 		ACF41A8E280EB206001B9B10 /* Data+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF41A8D280EB206001B9B10 /* Data+Extension.swift */; };
-		ACF41A92280EB268001B9B10 /* Weather.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACF41A91280EB268001B9B10 /* Weather.storyboard */; };
 		ACF41A94280EB2B9001B9B10 /* Storyboard+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF41A93280EB2B9001B9B10 /* Storyboard+Extension.swift */; };
 		ACF41A97280EB365001B9B10 /* Identifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF41A96280EB365001B9B10 /* Identifier.swift */; };
 		ACF41A9E280EB438001B9B10 /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF41A9D280EB438001B9B10 /* WeatherViewController.swift */; };
@@ -29,18 +26,27 @@
 		ACF41AA7280EB55B001B9B10 /* WeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF41AA6280EB55B001B9B10 /* WeatherViewModel.swift */; };
 		ACF41AAA280EB892001B9B10 /* IPLookupAPIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF41AA9280EB892001B9B10 /* IPLookupAPIModel.swift */; };
 		ACF41AAC280EBDF0001B9B10 /* ForecastWeatherAPIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF41AAB280EBDF0001B9B10 /* ForecastWeatherAPIModel.swift */; };
+		FAF04F92280EDA1A00F7E27F /* Todo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAF04F91280EDA1A00F7E27F /* Todo.storyboard */; };
+		FAF04F95280EDA6D00F7E27F /* MenuTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF04F94280EDA6D00F7E27F /* MenuTabBarController.swift */; };
+		FAF04F9D280EDB8200F7E27F /* TodoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF04F9B280EDB8200F7E27F /* TodoTableViewCell.swift */; };
+		FAF04F9E280EDB8200F7E27F /* TodoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAF04F9C280EDB8200F7E27F /* TodoTableViewCell.xib */; };
+		FAF04FA3280EDEB800F7E27F /* HomeTodosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF04FA2280EDEB800F7E27F /* HomeTodosViewController.swift */; };
+		FAF04FA6280EF83200F7E27F /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF04FA5280EF83200F7E27F /* DataManager.swift */; };
+		FAF04FA9280EF87D00F7E27F /* TodoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF04FA8280EF87D00F7E27F /* TodoModel.swift */; };
+		FAF04FAB280EFAD100F7E27F /* TodoInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF04FAA280EFAD100F7E27F /* TodoInfoViewController.swift */; };
+		FAF04FAE280EFAFA00F7E27F /* TodoInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF04FAD280EFAFA00F7E27F /* TodoInfoViewModel.swift */; };
+		FAF04FB0280EFF5500F7E27F /* HomeTodosViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF04FAF280EFF5500F7E27F /* HomeTodosViewModel.swift */; };
+		FAF9982D2B84FC0900FA40E8 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF9982C2B84FC0900FA40E8 /* BaseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4DBA3A3863333D79F9D1A192 /* Pods-CustomTabBarController.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomTabBarController.debug.xcconfig"; path = "Target Support Files/Pods-CustomTabBarController/Pods-CustomTabBarController.debug.xcconfig"; sourceTree = "<group>"; };
 		537BDA3E23C43B8C001EF4B3 /* CustomTabBarController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomTabBarController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		537BDA4123C43B8C001EF4B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		537BDA4323C43B8C001EF4B3 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		537BDA4623C43B8C001EF4B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		537BDA4823C43B8D001EF4B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		537BDA4B23C43B8D001EF4B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		537BDA4D23C43B8D001EF4B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		537BDA5523C43BCF001EF4B3 /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
 		537BDA5723C43D90001EF4B3 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		537BDA5923C43D9F001EF4B3 /* ActionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionViewController.swift; sourceTree = "<group>"; };
 		537BDA5B23C43DAF001EF4B3 /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
@@ -48,7 +54,6 @@
 		53E5313E26C561220D774B79 /* Pods_CustomTabBarController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CustomTabBarController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		69500D837915D80DD5AFFDCD /* Pods-CustomTabBarController.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomTabBarController.release.xcconfig"; path = "Target Support Files/Pods-CustomTabBarController/Pods-CustomTabBarController.release.xcconfig"; sourceTree = "<group>"; };
 		ACF41A8D280EB206001B9B10 /* Data+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Extension.swift"; sourceTree = "<group>"; };
-		ACF41A91280EB268001B9B10 /* Weather.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Weather.storyboard; sourceTree = "<group>"; };
 		ACF41A93280EB2B9001B9B10 /* Storyboard+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Storyboard+Extension.swift"; sourceTree = "<group>"; };
 		ACF41A96280EB365001B9B10 /* Identifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifier.swift; sourceTree = "<group>"; };
 		ACF41A9D280EB438001B9B10 /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
@@ -58,6 +63,18 @@
 		ACF41AA6280EB55B001B9B10 /* WeatherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewModel.swift; sourceTree = "<group>"; };
 		ACF41AA9280EB892001B9B10 /* IPLookupAPIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPLookupAPIModel.swift; sourceTree = "<group>"; };
 		ACF41AAB280EBDF0001B9B10 /* ForecastWeatherAPIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastWeatherAPIModel.swift; sourceTree = "<group>"; };
+		FAF04F91280EDA1A00F7E27F /* Todo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Todo.storyboard; sourceTree = "<group>"; };
+		FAF04F94280EDA6D00F7E27F /* MenuTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTabBarController.swift; sourceTree = "<group>"; };
+		FAF04F9B280EDB8200F7E27F /* TodoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoTableViewCell.swift; sourceTree = "<group>"; };
+		FAF04F9C280EDB8200F7E27F /* TodoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TodoTableViewCell.xib; sourceTree = "<group>"; };
+		FAF04FA2280EDEB800F7E27F /* HomeTodosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTodosViewController.swift; sourceTree = "<group>"; };
+		FAF04FA5280EF83200F7E27F /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		FAF04FA8280EF87D00F7E27F /* TodoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoModel.swift; sourceTree = "<group>"; };
+		FAF04FAA280EFAD100F7E27F /* TodoInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoInfoViewController.swift; sourceTree = "<group>"; };
+		FAF04FAD280EFAFA00F7E27F /* TodoInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoInfoViewModel.swift; sourceTree = "<group>"; };
+		FAF04FAF280EFF5500F7E27F /* HomeTodosViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTodosViewModel.swift; sourceTree = "<group>"; };
+		FAF9982B2B84F91700FA40E8 /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
+		FAF9982C2B84FC0900FA40E8 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,12 +110,11 @@
 		537BDA4023C43B8C001EF4B3 /* CustomTabBarController */ = {
 			isa = PBXGroup;
 			children = (
+				FAF9982A2B84F90A00FA40E8 /* Configuration */,
 				ACF41A98280EB3E1001B9B10 /* Modules */,
 				ACF41A8F280EB24F001B9B10 /* Resource */,
 				ACF41A8B280EB1EA001B9B10 /* Shared */,
 				537BDA4123C43B8C001EF4B3 /* AppDelegate.swift */,
-				537BDA4323C43B8C001EF4B3 /* HomeViewController.swift */,
-				537BDA5523C43BCF001EF4B3 /* CustomTabBarController.swift */,
 				537BDA5F23C44412001EF4B3 /* MasterTabBarController.swift */,
 				537BDA5B23C43DAF001EF4B3 /* ThirdViewController.swift */,
 				537BDA5923C43D9F001EF4B3 /* ActionViewController.swift */,
@@ -114,6 +130,7 @@
 		ACF41A8B280EB1EA001B9B10 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				FAF04F9F280EDC7D00F7E27F /* Base */,
 				ACF41A8C280EB1F2001B9B10 /* Extension */,
 			);
 			path = Shared;
@@ -141,7 +158,7 @@
 		ACF41A90280EB257001B9B10 /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
-				ACF41A91280EB268001B9B10 /* Weather.storyboard */,
+				FAF04F91280EDA1A00F7E27F /* Todo.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -157,6 +174,8 @@
 		ACF41A98280EB3E1001B9B10 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				FAF04F93280EDA4400F7E27F /* MenuTabbar */,
+				FAF04F90280ED9F900F7E27F /* Todos */,
 				ACF41A99280EB3ED001B9B10 /* Weather */,
 			);
 			path = Modules;
@@ -232,6 +251,93 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		FAF04F90280ED9F900F7E27F /* Todos */ = {
+			isa = PBXGroup;
+			children = (
+				FAF04FAC280EFAE800F7E27F /* ViewModel */,
+				FAF04FA7280EF86F00F7E27F /* Model */,
+				FAF04FA4280EF1D700F7E27F /* DataManager */,
+				FAF04F99280EDB5C00F7E27F /* View */,
+				FAF04F96280EDB2A00F7E27F /* Controller */,
+			);
+			path = Todos;
+			sourceTree = "<group>";
+		};
+		FAF04F93280EDA4400F7E27F /* MenuTabbar */ = {
+			isa = PBXGroup;
+			children = (
+				FAF04F94280EDA6D00F7E27F /* MenuTabBarController.swift */,
+			);
+			path = MenuTabbar;
+			sourceTree = "<group>";
+		};
+		FAF04F96280EDB2A00F7E27F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FAF04FA2280EDEB800F7E27F /* HomeTodosViewController.swift */,
+				FAF04FAA280EFAD100F7E27F /* TodoInfoViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FAF04F99280EDB5C00F7E27F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FAF04F9A280EDB6600F7E27F /* TodoTableViewCell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FAF04F9A280EDB6600F7E27F /* TodoTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				FAF04F9B280EDB8200F7E27F /* TodoTableViewCell.swift */,
+				FAF04F9C280EDB8200F7E27F /* TodoTableViewCell.xib */,
+			);
+			path = TodoTableViewCell;
+			sourceTree = "<group>";
+		};
+		FAF04F9F280EDC7D00F7E27F /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				FAF9982C2B84FC0900FA40E8 /* BaseViewController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		FAF04FA4280EF1D700F7E27F /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				FAF04FA5280EF83200F7E27F /* DataManager.swift */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		FAF04FA7280EF86F00F7E27F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FAF04FA8280EF87D00F7E27F /* TodoModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FAF04FAC280EFAE800F7E27F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FAF04FAD280EFAFA00F7E27F /* TodoInfoViewModel.swift */,
+				FAF04FAF280EFF5500F7E27F /* HomeTodosViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FAF9982A2B84F90A00FA40E8 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				FAF9982B2B84F91700FA40E8 /* Header.h */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -293,9 +399,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				537BDA4C23C43B8D001EF4B3 /* LaunchScreen.storyboard in Resources */,
-				ACF41A92280EB268001B9B10 /* Weather.storyboard in Resources */,
+				FAF04F9E280EDB8200F7E27F /* TodoTableViewCell.xib in Resources */,
 				ACF41AA3280EB462001B9B10 /* WeatherTableViewCell.xib in Resources */,
 				537BDA4923C43B8D001EF4B3 /* Assets.xcassets in Resources */,
+				FAF04F92280EDA1A00F7E27F /* Todo.storyboard in Resources */,
 				537BDA4723C43B8C001EF4B3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -351,17 +458,24 @@
 			files = (
 				ACF41AA2280EB462001B9B10 /* WeatherTableViewCell.swift in Sources */,
 				537BDA5823C43D90001EF4B3 /* SecondViewController.swift in Sources */,
+				FAF04FAE280EFAFA00F7E27F /* TodoInfoViewModel.swift in Sources */,
+				FAF9982D2B84FC0900FA40E8 /* BaseViewController.swift in Sources */,
 				537BDA5A23C43D9F001EF4B3 /* ActionViewController.swift in Sources */,
+				FAF04F9D280EDB8200F7E27F /* TodoTableViewCell.swift in Sources */,
+				FAF04F95280EDA6D00F7E27F /* MenuTabBarController.swift in Sources */,
 				ACF41AA7280EB55B001B9B10 /* WeatherViewModel.swift in Sources */,
-				537BDA4423C43B8C001EF4B3 /* HomeViewController.swift in Sources */,
 				537BDA6023C44412001EF4B3 /* MasterTabBarController.swift in Sources */,
+				FAF04FA6280EF83200F7E27F /* DataManager.swift in Sources */,
+				FAF04FA9280EF87D00F7E27F /* TodoModel.swift in Sources */,
 				ACF41A97280EB365001B9B10 /* Identifier.swift in Sources */,
 				537BDA4223C43B8C001EF4B3 /* AppDelegate.swift in Sources */,
 				537BDA5C23C43DAF001EF4B3 /* ThirdViewController.swift in Sources */,
-				537BDA5623C43BCF001EF4B3 /* CustomTabBarController.swift in Sources */,
+				FAF04FA3280EDEB800F7E27F /* HomeTodosViewController.swift in Sources */,
 				ACF41AAC280EBDF0001B9B10 /* ForecastWeatherAPIModel.swift in Sources */,
 				ACF41A94280EB2B9001B9B10 /* Storyboard+Extension.swift in Sources */,
 				ACF41A8E280EB206001B9B10 /* Data+Extension.swift in Sources */,
+				FAF04FB0280EFF5500F7E27F /* HomeTodosViewModel.swift in Sources */,
+				FAF04FAB280EFAD100F7E27F /* TodoInfoViewController.swift in Sources */,
 				ACF41AAA280EB892001B9B10 /* IPLookupAPIModel.swift in Sources */,
 				ACF41A9E280EB438001B9B10 /* WeatherViewController.swift in Sources */,
 				ACF41AA5280EB49B001B9B10 /* UITableView+Extension.swift in Sources */,
@@ -513,12 +627,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = CustomTabBarController/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = CuongDD.CustomTabBarController;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = $SRCROOT/CustomTabBarController/Configuration/Header.h;
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -531,12 +647,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = CustomTabBarController/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = CuongDD.CustomTabBarController;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = $SRCROOT/CustomTabBarController/Configuration/Header.h;
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

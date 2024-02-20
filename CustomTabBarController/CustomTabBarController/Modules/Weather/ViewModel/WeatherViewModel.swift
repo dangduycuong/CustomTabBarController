@@ -37,10 +37,10 @@ class WeatherViewModel {
             guard let data = data else { return }
             data.printFormatedJSON()
             do {
-//                let json = try JSONDecoder().decode(FullMealDetails.self, from: data)
-//                if let meals = json.meals {
-//                    self.meals = meals
-//                }
+                //                let json = try JSONDecoder().decode(FullMealDetails.self, from: data)
+                //                if let meals = json.meals {
+                //                    self.meals = meals
+                //                }
                 completed()
             } catch let error {
                 print("decode error: ", error)
@@ -69,8 +69,8 @@ class WeatherViewModel {
         
         let dataTask = URLSession.shared.dataTask(with: urlRequest, completionHandler: { (data, response, error) in
             print("Request: ", url)
-            print("Params: ", url.query)
-            print("Header: ", urlRequest.allHTTPHeaderFields)
+            print("Params: ", url.query as Any)
+            print("Header: ", urlRequest.allHTTPHeaderFields as Any)
             if error != nil {
                 print(error as Any)
                 return
@@ -88,5 +88,38 @@ class WeatherViewModel {
         })
         dataTask.resume()
         
+    }
+    
+    func downloadIcon(path: String, completed: @escaping((Data) -> Void)) {
+        var urlComponents = URLComponents()
+        urlComponents.scheme = "https"
+        urlComponents.host = "weatherapi-com"
+        urlComponents.path = path
+        
+        guard let url = urlComponents.url else { return }
+        var request = URLRequest(url: url)
+        let headers = [
+            "X-RapidAPI-Host": "weatherapi-com.p.rapidapi.com",
+            "X-RapidAPI-Key": "fb71aa7f62msh153e4924e940392p16bbc4jsn166248f8bdaa",
+        ]
+        request.allHTTPHeaderFields = headers
+        
+        let dataTask = URLSession.shared.dataTask(with: request) { [weak self] (data, response, error) in
+            guard let `self` = self else { return }
+            print("Request: ", url)
+            print("Params: ", url.query as Any)
+            print("Header: ", request.allHTTPHeaderFields as Any)
+            
+            if let data = data {
+                completed(data)
+            }
+            if let error = error {
+                print("---- xinh nhat tren doi aye", error)
+            }
+            if let response = response as? HTTPURLResponse {
+                print("----", response.statusCode)
+            }
+        }
+        dataTask.resume()
     }
 }

@@ -9,6 +9,11 @@
 import UIKit
 
 class MasterTabBarController: UITabBarController, UITabBarControllerDelegate {
+    override func loadView() {
+        super.loadView()
+        
+        navigationController?.navigationBar.isHidden = true
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()

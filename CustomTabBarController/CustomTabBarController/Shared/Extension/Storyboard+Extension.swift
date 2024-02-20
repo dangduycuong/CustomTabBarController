@@ -28,6 +28,7 @@ enum UIStoryboardType {
     
     case main
     case werther
+    case todo
     
     var identifier: String {
         switch self {
@@ -35,6 +36,8 @@ enum UIStoryboardType {
             return "Main"
         case .werther:
             return "Weather"
+        case .todo:
+            return "Todo"
         }
     }
 }

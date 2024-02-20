@@ -8,16 +8,29 @@
 
 import UIKit
 
-class WeatherViewController: UIViewController {
+class WeatherViewController: BaseViewController {
     
-    @IBOutlet weak var locationLabel: UILabel!
-    @IBOutlet weak var lastUpdatedLabel: UILabel!
+    private lazy var locationLabel: UILabel = {
+        let label = UILabel()
+        return label
+    }()
+    
+    private lazy var lastUpdatedLabel: UILabel = {
+        let label = UILabel()
+        return label
+    }()
+    
+    private lazy var imageView: UIImageView = {
+        let imageView = UIImageView()
+        return imageView
+    }()
     
     var viewModel = WeatherViewModel()
     
     override func loadView() {
         super.loadView()
-        view.backgroundColor = .white
+        
+        prepareForViewController()
     }
     
     override func viewDidLoad() {
@@ -25,14 +38,21 @@ class WeatherViewController: UIViewController {
         
         // Do any additional setup after loading the view.
         title = "uuu"
-//        viewModel.fetchMealBycategories { [weak self] in
-//            guard let `self` = self else { return }
-//            
-//            
-//        }
+        //        viewModel.fetchMealBycategories { [weak self] in
+        //            guard let `self` = self else { return }
+        //
+        //
+        //        }
         
         viewModel.fetchForecastWeather { [weak self] in
             guard let `self` = self else { return }
+            if let icon = self.viewModel.forecastWeather?.current?.condition?.icon {
+                self.viewModel.downloadIcon(path: icon) { data in
+                    DispatchQueue.main.async {
+                        self.imageView.image = UIImage(data: data)
+                    }
+                }
+            }
             self.updateUI()
         }
     }
@@ -43,15 +63,28 @@ class WeatherViewController: UIViewController {
                let name = self.viewModel.forecastWeather?.location?.name {
                 self.locationLabel.text = country + " - " + name
             }
+            
             if let lastUpdated = self.viewModel.forecastWeather?.current?.lastUpdated {
                 self.lastUpdatedLabel.text = lastUpdated
             }
         }
         
-        
     }
     
-    
+    private func prepareForViewController() {
+        addBackground()
+        addTitle("Thời Tiết")
+        
+        view.layout(locationLabel)
+            .below(titleLabel, 32)
+            .left(16)
+            .right(16)
+        
+        view.layout(lastUpdatedLabel)
+            .below(locationLabel, 16)
+            .left(16)
+            .right(16)
+    }
     /*
      // MARK: - Navigation
      

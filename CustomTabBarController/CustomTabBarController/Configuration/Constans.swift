@@ -108,11 +108,11 @@ enum Environment {
         case .debug:
             return "https://www.themealdb.com"
         case .uat:
-            return "https://dev-api.driverdoc.io"
+            return "https://www.themealdb.com"
         case .master:
-            return "https://qa-api.driverdoc.io"
+            return "https://www.themealdb.com"
         case .production:
-            return "https://api.driverdoc.io"
+            return "https://www.themealdb.com"
         }
     }
     
@@ -125,45 +125,32 @@ enum Environment {
     }
     
     var googleAPIKey: String {
-        return "AIzaSyCSzKRjZHWcpNQAM_pb8ZIaI4s1Sl19iao"
+        return ""
     }
     
     var pendoKey: String {
         switch self {
         case .debug:
-            return "eyJhbGciOiJSUzI1NiIsImtpZCI6IiIsInR5cCI6IkpXVCJ9.eyJkYXRhY2VudGVyIjoidXMiLCJrZXkiOiJiODFlZGMyN2ZlNWQ4NzZiMTQ2ZjgxNmI2MTQzZDkxNWExMzljMDUxNGU2ZWJmNTdjMTY0MjViZTZmOTE1MDJmNDRlNGZmOWM4MWI3NGFjMWEyNDNhY2NkYTU4NDdiNWVlNjFjODJiNjcwZmU1ZTU2MWJkMGU4ZDA5ZjYxYWQzM2U4NzkzZDM1NGFlYTQ2OWM0NmFlOGJkYzFmMTZiMDIwODVmZmEyN2FkZGMxYmI0ZDgxZmI3Nzc2OWU4MDZiOGIxYjg0ZGQyMzg5MWFhNTA0YzA1NTgxNzRmOGZmOWY0OC45NTUyZDgyNmU1MDI2MTZiZWJjMmRlNjUwMTE3MWUyZC5iMTdlOWM4ZDgwODRlN2U3OTI2MDQ3MTQ1ZmJlYWY3NTg1NzI2ODk5NTQ0ODk2YzIzNWZhM2YwMTExYTBiYTY5In0.M4JSX82WYX8auARLVRMFshyY38lOT2k1PshOYTvU8ysUNq6392_oPYee5snN84Am8mK72LrlM3aHopVRQbYFZk6bOpx_lxbnS-ePv6ovGc_X_yIOXt3dF-ZBVWJmua8ByAoO-dYTByZ4vmy1MOozAK4upkgmh5Czqf6-n_BQZwI"
+            return ""
         case .uat:
-            return "eyJhbGciOiJSUzI1NiIsImtpZCI6IiIsInR5cCI6IkpXVCJ9.eyJkYXRhY2VudGVyIjoidXMiLCJrZXkiOiJiODFlZGMyN2ZlNWQ4NzZiMTQ2ZjgxNmI2MTQzZDkxNWExMzljMDUxNGU2ZWJmNTdjMTY0MjViZTZmOTE1MDJmNDRlNGZmOWM4MWI3NGFjMWEyNDNhY2NkYTU4NDdiNWVlNjFjODJiNjcwZmU1ZTU2MWJkMGU4ZDA5ZjYxYWQzM2U4NzkzZDM1NGFlYTQ2OWM0NmFlOGJkYzFmMTZiMDIwODVmZmEyN2FkZGMxYmI0ZDgxZmI3Nzc2OWU4MDZiOGIxYjg0ZGQyMzg5MWFhNTA0YzA1NTgxNzRmOGZmOWY0OC45NTUyZDgyNmU1MDI2MTZiZWJjMmRlNjUwMTE3MWUyZC5iMTdlOWM4ZDgwODRlN2U3OTI2MDQ3MTQ1ZmJlYWY3NTg1NzI2ODk5NTQ0ODk2YzIzNWZhM2YwMTExYTBiYTY5In0.M4JSX82WYX8auARLVRMFshyY38lOT2k1PshOYTvU8ysUNq6392_oPYee5snN84Am8mK72LrlM3aHopVRQbYFZk6bOpx_lxbnS-ePv6ovGc_X_yIOXt3dF-ZBVWJmua8ByAoO-dYTByZ4vmy1MOozAK4upkgmh5Czqf6-n_BQZwI"
+            return ""
         case .master:
-            return "eyJhbGciOiJSUzI1NiIsImtpZCI6IiIsInR5cCI6IkpXVCJ9.eyJkYXRhY2VudGVyIjoidXMiLCJrZXkiOiJiODFlZGMyN2ZlNWQ4NzZiMTQ2ZjgxNmI2MTQzZDkxNWExMzljMDUxNGU2ZWJmNTdjMTY0MjViZTZmOTE1MDJmNDRlNGZmOWM4MWI3NGFjMWEyNDNhY2NkYTU4NDdiNWVlNjFjODJiNjcwZmU1ZTU2MWJkMGU4ZDA5ZjYxYWQzM2U4NzkzZDM1NGFlYTQ2OWM0NmFlOGJkYzFmMTZiMDIwODVmZmEyN2FkZGMxYmI0ZDgxZmI3Nzc2OWU4MDZiOGIxYjg0ZGQyMzg5MWFhNTA0YzA1NTgxNzRmOGZmOWY0OC45NTUyZDgyNmU1MDI2MTZiZWJjMmRlNjUwMTE3MWUyZC5iMTdlOWM4ZDgwODRlN2U3OTI2MDQ3MTQ1ZmJlYWY3NTg1NzI2ODk5NTQ0ODk2YzIzNWZhM2YwMTExYTBiYTY5In0.M4JSX82WYX8auARLVRMFshyY38lOT2k1PshOYTvU8ysUNq6392_oPYee5snN84Am8mK72LrlM3aHopVRQbYFZk6bOpx_lxbnS-ePv6ovGc_X_yIOXt3dF-ZBVWJmua8ByAoO-dYTByZ4vmy1MOozAK4upkgmh5Czqf6-n_BQZwI"
+            return ""
         case .production:
-            return "eyJhbGciOiJSUzI1NiIsImtpZCI6IiIsInR5cCI6IkpXVCJ9.eyJkYXRhY2VudGVyIjoidXMiLCJrZXkiOiJiODFlZGMyN2ZlNWQ4NzZiMTQ2ZjgxNmI2MTQzZDkxNWExMzljMDUxNGU2ZWJmNTdjMTY0MjViZTZmOTE1MDJmNDRlNGZmOWM4MWI3NGFjMWEyNDNhY2NkYTU4NDdiNWVlNjFjODJiNjcwZmU1ZTU2MWJkMGU4ZDA5ZjYxYWQzM2U4NzkzZDM1NGFlYTQ2OWM0NmFlOGJkYzFmMTZiMDIwODVmZmEyN2FkZGMxYmI0ZDgxZmI3Nzc2OWU4MDZiOGIxYjg0ZGQyMzg5MWFhNTA0YzA1NTgxNzRmOGZmOWY0OC45NTUyZDgyNmU1MDI2MTZiZWJjMmRlNjUwMTE3MWUyZC5iMTdlOWM4ZDgwODRlN2U3OTI2MDQ3MTQ1ZmJlYWY3NTg1NzI2ODk5NTQ0ODk2YzIzNWZhM2YwMTExYTBiYTY5In0.M4JSX82WYX8auARLVRMFshyY38lOT2k1PshOYTvU8ysUNq6392_oPYee5snN84Am8mK72LrlM3aHopVRQbYFZk6bOpx_lxbnS-ePv6ovGc_X_yIOXt3dF-ZBVWJmua8ByAoO-dYTByZ4vmy1MOozAK4upkgmh5Czqf6-n_BQZwI"
+            return ""
         }
     }
     
     var cameraGeniusKey: String {
         switch self {
         case .debug:
-            return "533c5007505704060055045439585a4d00115b125144565601184003444c5140126b55550c04020f57070400"
+            return ""
         case .uat:
-            return "533c5007505704060055045439585a4d00115b125144565601185907444c55420344143d09020206510508015b54"
+            return ""
         case .master:
-            return "533c5007505704060055045439585a4d00115b125144565601185907444c55420344143d09020206510508015b54"
+            return ""
         case .production:
-            return "533c5007505704060055045439585a4d00115b125144565601184414585c5140126b55550c04020f57040701"
-        }
-    }
-    
-    var awsconfiguration: String {
-        switch self {
-        case .debug:
-            return "awsconfiguration-dev"
-        case .uat:
-            return "awsconfiguration-dev"
-        case .master:
-            return "awsconfiguration-master"
-        case .production:
-            return "awsconfiguration-production"
+            return ""
         }
     }
     
@@ -183,11 +170,11 @@ enum Environment {
     var appcenterKey: String {
         switch self {
         case .uat:
-            return "2edd34b4-8d05-4d6b-b16f-97c4b7186e91"
+            return ""
         case .debug:
-            return "2edd34b4-8d05-4d6b-b16f-97c4b7186e91"
+            return ""
         case .master:
-            return "4bbde848-712b-43a1-a3b5-58a6b5298951"
+            return ""
         case .production:
             return ""
         }
@@ -196,13 +183,13 @@ enum Environment {
     var GAITrackingId: String {
         switch self {
         case .uat:
-            return "259911952"
+            return ""
         case .debug:
-            return "2274517811"
+            return ""
         case .master:
-            return "2274497961"
+            return ""
         case .production:
-            return "2260908408"
+            return ""
         }
     }
 }

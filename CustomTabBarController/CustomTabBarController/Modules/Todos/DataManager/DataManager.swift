@@ -35,8 +35,21 @@ class DataManager: NSObject {
         completionHandler(listDpcumentType)
     }
     
+    func editTodo(newTodo: TodoModel) -> Bool {
+        guard let todo = realm.objects(TodoModel.self).filter({$0.idTodo == newTodo.idTodo}).first else {
+            return false
+        }
+        try! realm.write {
+            todo.titleTodo = newTodo.titleTodo
+            todo.descriptionTodo = newTodo.descriptionTodo
+            todo.completed = newTodo.completed
+        }
+        return true
+    }
+    
     func removeTodo(idTodo: String) -> Bool {
-        guard let todo = realm.objects(TodoModel.self).filter({$0.idTodo == idTodo}).first else { return false }
+        guard let todo = realm.objects(TodoModel.self).filter({ $0.idTodo == idTodo }).first else { return false
+        }
         try! realm.write {
             realm.delete(todo)
         }

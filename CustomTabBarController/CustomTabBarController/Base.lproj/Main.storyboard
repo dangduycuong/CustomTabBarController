@@ -31,8 +31,21 @@
                     <view key="view" contentMode="scaleToFill" id="EAd-t3-FWw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="k2R-lh-YhS">
+                                <rect key="frame" x="16" y="64" width="382" height="382"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="k2R-lh-YhS" secondAttribute="height" id="vGe-ik-zZM"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="dEK-DC-Nen"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="dEK-DC-Nen" firstAttribute="trailing" secondItem="k2R-lh-YhS" secondAttribute="trailing" constant="16" id="PCN-LS-xzE"/>
+                            <constraint firstItem="k2R-lh-YhS" firstAttribute="leading" secondItem="dEK-DC-Nen" secondAttribute="leading" constant="16" id="hHB-DK-70g"/>
+                            <constraint firstItem="k2R-lh-YhS" firstAttribute="top" secondItem="dEK-DC-Nen" secondAttribute="top" constant="16" id="oaG-rN-yOm"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" image="home" id="zbf-5m-RpA"/>
                 </viewController>

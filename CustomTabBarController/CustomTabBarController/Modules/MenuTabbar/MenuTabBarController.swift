@@ -19,7 +19,7 @@ class MenuTabBarController: UITabBarController, UITabBarControllerDelegate {
      }
      */
     var homeViewController: HomeTodosViewController!
-    var secondViewController: SecondViewController!
+    var secondViewController: MealViewController!
     var actionViewController: ActionViewController!
     var thirdViewController: ThirdViewController!
     var fourthViewController: WeatherViewController!
@@ -34,9 +34,9 @@ class MenuTabBarController: UITabBarController, UITabBarControllerDelegate {
         self.delegate = self
         let action = storyboard?.instantiateViewController(withIdentifier: "ActionViewController") as! ActionViewController
         
-        let home = UIStoryboard.storyBoard(.todo).viewController(of: HomeTodosViewController.self)
+        let home = HomeTodosViewController()
         homeViewController = home
-        secondViewController = SecondViewController()
+        secondViewController = MealViewController()
         actionViewController = action
         thirdViewController = ThirdViewController()
         
@@ -95,9 +95,9 @@ enum TabbarTitle {
         get {
             switch self {
             case .home:
-                return "home"
+                return "Home"
             case .second:
-                return "second"
+                return "Meals"
             case .action:
                 return "action"
             case .third:

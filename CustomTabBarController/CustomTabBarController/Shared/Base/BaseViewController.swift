@@ -9,11 +9,23 @@
 import UIKit
 
 class BaseViewController: UIViewController {
+    let disposeBag = DisposeBag()
     var loadingVC = LoadingVC()
     
     lazy var titleLabel: UILabel = {
         let label = UILabel()
         return label
+    }()
+    
+    lazy var backButton: UIButton = {
+        let button = UIButton()
+        button.addTarget(self, action: #selector(addBackButtonTapped), for: .touchUpInside)
+        return button
+    }()
+    
+    lazy var backImageView: UIImageView = {
+        let imageView = UIImageView()
+        return imageView
     }()
     
     /*
@@ -28,12 +40,27 @@ class BaseViewController: UIViewController {
     
     func addTitle(_ title: String) {
         view.layout(titleLabel)
-            .topSafe().centerX()
+            .topSafe(16).centerX()
+        titleLabel.font = UIFont.boldSystemFont(ofSize: 20)
         titleLabel.text = title
     }
     
     func addBackground() {
         view.backgroundColor = UIColor.white
+    }
+    
+    func addBackButton() {
+        let image = R.image.previous()
+        backImageView.image = image
+        view.layout(backImageView)
+            .left(16).centerY(titleLabel).width(24).height(24)
+        
+        view.layout(backButton)
+            .center(backImageView).width(40).height(40)
+    }
+    
+    @objc func addBackButtonTapped(_ sender: UIButton) {
+        navigationController?.popViewController(animated: true)
     }
     
     func startAnimating() {
@@ -46,6 +73,16 @@ class BaseViewController: UIViewController {
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
             self.loadingVC.dismiss(animated: true)
         }
+    }
+    
+    func showMessageAlert(message: String, close: @escaping () -> Void) {
+        let vc = ShowAlertViewController()
+        vc.modalPresentationStyle = .overCurrentContext
+        vc.modalTransitionStyle = .crossDissolve
+        vc.messageAlert = message
+        vc.closeAlert = close
+        
+        present(vc, animated: true)
     }
 }
 

@@ -9,5 +9,10 @@
 #ifndef Header_h
 #define Header_h
 @import Material;
+@import RxSwift;
+@import RxCocoa;
+@import SwiftyJSON;
+@import PromiseKit;
+@import Alamofire;
 
 #endif /* Header_h */

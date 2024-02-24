@@ -47,8 +47,6 @@ class Utils: NSObject {
                 return
             }
             let loadingView = CustomLoadingView()
-            loadingView.backgroundColor = UIColor.black
-            loadingView.layer.cornerRadius = 4
             topVC.view.layout(loadingView)
                 .center().width(88).height(88)
         }

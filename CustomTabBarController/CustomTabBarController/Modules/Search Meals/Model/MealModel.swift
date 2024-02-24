@@ -16,6 +16,13 @@ struct MealModel {
     
     var strInstructions: String?
     var strMealThumb: String?
+    var idCategory: String?
+    var strCategoryThumb: String?
+    
+    var strCategoryDescription: String?
+    var idIngredient: String?
+    var strIngredient: String?
+    var strDescription: String?
     
     init(json: JSON? = nil) {
         guard let json = json else { return }
@@ -27,5 +34,12 @@ struct MealModel {
         
         strInstructions = json["strInstructions"].string
         strMealThumb = json["strMealThumb"].string
+        idCategory = json["idCategory"].string
+        strCategoryThumb = json["strCategoryThumb"].string
+        
+        strCategoryDescription = json["strCategoryDescription"].string
+        idIngredient = json["idIngredient"].string
+        strIngredient = json["strIngredient"].string
+        strDescription = json["strDescription"].string
     }
 }

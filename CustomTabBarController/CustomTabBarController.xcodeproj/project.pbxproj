@@ -12,19 +12,16 @@
 		537BDA4723C43B8C001EF4B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 537BDA4523C43B8C001EF4B3 /* Main.storyboard */; };
 		537BDA4923C43B8D001EF4B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 537BDA4823C43B8D001EF4B3 /* Assets.xcassets */; };
 		537BDA4C23C43B8D001EF4B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 537BDA4A23C43B8D001EF4B3 /* LaunchScreen.storyboard */; };
-		537BDA5A23C43D9F001EF4B3 /* ActionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537BDA5923C43D9F001EF4B3 /* ActionViewController.swift */; };
-		537BDA5C23C43DAF001EF4B3 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537BDA5B23C43DAF001EF4B3 /* ThirdViewController.swift */; };
-		537BDA6023C44412001EF4B3 /* MasterTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537BDA5F23C44412001EF4B3 /* MasterTabBarController.swift */; };
 		ACF41A8E280EB206001B9B10 /* Data+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF41A8D280EB206001B9B10 /* Data+Extension.swift */; };
 		ACF41A94280EB2B9001B9B10 /* Storyboard+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF41A93280EB2B9001B9B10 /* Storyboard+Extension.swift */; };
 		ACF41A97280EB365001B9B10 /* Identifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF41A96280EB365001B9B10 /* Identifier.swift */; };
-		ACF41A9E280EB438001B9B10 /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF41A9D280EB438001B9B10 /* WeatherViewController.swift */; };
-		ACF41AA2280EB462001B9B10 /* WeatherTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF41AA0280EB462001B9B10 /* WeatherTableViewCell.swift */; };
-		ACF41AA3280EB462001B9B10 /* WeatherTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACF41AA1280EB462001B9B10 /* WeatherTableViewCell.xib */; };
+		ACF41A9E280EB438001B9B10 /* MealIngredientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF41A9D280EB438001B9B10 /* MealIngredientViewController.swift */; };
 		ACF41AA5280EB49B001B9B10 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF41AA4280EB49B001B9B10 /* UITableView+Extension.swift */; };
-		ACF41AA7280EB55B001B9B10 /* WeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF41AA6280EB55B001B9B10 /* WeatherViewModel.swift */; };
-		ACF41AAA280EB892001B9B10 /* IPLookupAPIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF41AA9280EB892001B9B10 /* IPLookupAPIModel.swift */; };
-		ACF41AAC280EBDF0001B9B10 /* ForecastWeatherAPIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF41AAB280EBDF0001B9B10 /* ForecastWeatherAPIModel.swift */; };
+		ACF41AA7280EB55B001B9B10 /* MealIngredientViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF41AA6280EB55B001B9B10 /* MealIngredientViewModel.swift */; };
+		FA2543E32B88E8A0000E7156 /* MealCategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2543E22B88E8A0000E7156 /* MealCategoriesViewController.swift */; };
+		FA2543E62B88E8FF000E7156 /* MealCategoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2543E52B88E8FF000E7156 /* MealCategoriesViewModel.swift */; };
+		FA2543F12B88F68E000E7156 /* MealAreaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2543F02B88F68E000E7156 /* MealAreaViewController.swift */; };
+		FA2543F42B88F746000E7156 /* MealAreaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2543F32B88F746000E7156 /* MealAreaViewModel.swift */; };
 		FA28055E2B862653008EC739 /* ShowAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA28055D2B862653008EC739 /* ShowAlertViewController.swift */; };
 		FA3633212B87ACD400DE129B /* MealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3633202B87ACD400DE129B /* MealViewController.swift */; };
 		FA3633252B87AE6600DE129B /* MealAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3633242B87AE6600DE129B /* MealAPI.swift */; };
@@ -36,11 +33,15 @@
 		FA3633332B87B53F00DE129B /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3633322B87B53F00DE129B /* BaseViewModel.swift */; };
 		FA3633362B87B6D600DE129B /* MealModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3633352B87B6D600DE129B /* MealModel.swift */; };
 		FA3633392B87B9E600DE129B /* MealTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3633382B87B9E600DE129B /* MealTableViewCell.swift */; };
-		FA5E91172B886EF500FA1BA2 /* MealDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5E91162B886EF500FA1BA2 /* MealDetailViewController.swift */; };
 		FA5E91192B888E5800FA1BA2 /* CustomLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5E91182B888E5800FA1BA2 /* CustomLoadingView.swift */; };
 		FACB5C752B85CB59007166D6 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACB5C742B85CB59007166D6 /* R.generated.swift */; };
 		FACB5C792B85D34E007166D6 /* BaseTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACB5C782B85D34E007166D6 /* BaseTextField.swift */; };
 		FACB5C7B2B861350007166D6 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACB5C7A2B861350007166D6 /* String+Extension.swift */; };
+		FACBA9CE2B88FC8E006FC787 /* TabbarTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACBA9CD2B88FC8E006FC787 /* TabbarTitle.swift */; };
+		FAE546472B89C2FF00D27CE9 /* ListMealsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE546462B89C2FF00D27CE9 /* ListMealsViewController.swift */; };
+		FAE5464A2B89C32600D27CE9 /* ListMealsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE546492B89C32600D27CE9 /* ListMealsViewModel.swift */; };
+		FAE5464E2B89C46A00D27CE9 /* MealDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE5464D2B89C46A00D27CE9 /* MealDetailViewController.swift */; };
+		FAE546512B89C4B300D27CE9 /* MealDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE546502B89C4B300D27CE9 /* MealDetailViewModel.swift */; };
 		FAF04F95280EDA6D00F7E27F /* MenuTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF04F94280EDA6D00F7E27F /* MenuTabBarController.swift */; };
 		FAF04F9D280EDB8200F7E27F /* TodoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF04F9B280EDB8200F7E27F /* TodoTableViewCell.swift */; };
 		FAF04F9E280EDB8200F7E27F /* TodoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAF04F9C280EDB8200F7E27F /* TodoTableViewCell.xib */; };
@@ -62,21 +63,18 @@
 		537BDA4823C43B8D001EF4B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		537BDA4B23C43B8D001EF4B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		537BDA4D23C43B8D001EF4B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		537BDA5923C43D9F001EF4B3 /* ActionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionViewController.swift; sourceTree = "<group>"; };
-		537BDA5B23C43DAF001EF4B3 /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
-		537BDA5F23C44412001EF4B3 /* MasterTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterTabBarController.swift; sourceTree = "<group>"; };
 		53E5313E26C561220D774B79 /* Pods_CustomTabBarController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CustomTabBarController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		69500D837915D80DD5AFFDCD /* Pods-CustomTabBarController.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomTabBarController.release.xcconfig"; path = "Target Support Files/Pods-CustomTabBarController/Pods-CustomTabBarController.release.xcconfig"; sourceTree = "<group>"; };
 		ACF41A8D280EB206001B9B10 /* Data+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Extension.swift"; sourceTree = "<group>"; };
 		ACF41A93280EB2B9001B9B10 /* Storyboard+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Storyboard+Extension.swift"; sourceTree = "<group>"; };
 		ACF41A96280EB365001B9B10 /* Identifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifier.swift; sourceTree = "<group>"; };
-		ACF41A9D280EB438001B9B10 /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
-		ACF41AA0280EB462001B9B10 /* WeatherTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherTableViewCell.swift; sourceTree = "<group>"; };
-		ACF41AA1280EB462001B9B10 /* WeatherTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WeatherTableViewCell.xib; sourceTree = "<group>"; };
+		ACF41A9D280EB438001B9B10 /* MealIngredientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealIngredientViewController.swift; sourceTree = "<group>"; };
 		ACF41AA4280EB49B001B9B10 /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
-		ACF41AA6280EB55B001B9B10 /* WeatherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewModel.swift; sourceTree = "<group>"; };
-		ACF41AA9280EB892001B9B10 /* IPLookupAPIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPLookupAPIModel.swift; sourceTree = "<group>"; };
-		ACF41AAB280EBDF0001B9B10 /* ForecastWeatherAPIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastWeatherAPIModel.swift; sourceTree = "<group>"; };
+		ACF41AA6280EB55B001B9B10 /* MealIngredientViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealIngredientViewModel.swift; sourceTree = "<group>"; };
+		FA2543E22B88E8A0000E7156 /* MealCategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealCategoriesViewController.swift; sourceTree = "<group>"; };
+		FA2543E52B88E8FF000E7156 /* MealCategoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealCategoriesViewModel.swift; sourceTree = "<group>"; };
+		FA2543F02B88F68E000E7156 /* MealAreaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealAreaViewController.swift; sourceTree = "<group>"; };
+		FA2543F32B88F746000E7156 /* MealAreaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealAreaViewModel.swift; sourceTree = "<group>"; };
 		FA28055D2B862653008EC739 /* ShowAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowAlertViewController.swift; sourceTree = "<group>"; };
 		FA3633202B87ACD400DE129B /* MealViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealViewController.swift; sourceTree = "<group>"; };
 		FA3633242B87AE6600DE129B /* MealAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealAPI.swift; sourceTree = "<group>"; };
@@ -88,11 +86,15 @@
 		FA3633322B87B53F00DE129B /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		FA3633352B87B6D600DE129B /* MealModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealModel.swift; sourceTree = "<group>"; };
 		FA3633382B87B9E600DE129B /* MealTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealTableViewCell.swift; sourceTree = "<group>"; };
-		FA5E91162B886EF500FA1BA2 /* MealDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetailViewController.swift; sourceTree = "<group>"; };
 		FA5E91182B888E5800FA1BA2 /* CustomLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLoadingView.swift; sourceTree = "<group>"; };
 		FACB5C742B85CB59007166D6 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		FACB5C782B85D34E007166D6 /* BaseTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTextField.swift; sourceTree = "<group>"; };
 		FACB5C7A2B861350007166D6 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		FACBA9CD2B88FC8E006FC787 /* TabbarTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarTitle.swift; sourceTree = "<group>"; };
+		FAE546462B89C2FF00D27CE9 /* ListMealsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListMealsViewController.swift; sourceTree = "<group>"; };
+		FAE546492B89C32600D27CE9 /* ListMealsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListMealsViewModel.swift; sourceTree = "<group>"; };
+		FAE5464D2B89C46A00D27CE9 /* MealDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetailViewController.swift; sourceTree = "<group>"; };
+		FAE546502B89C4B300D27CE9 /* MealDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetailViewModel.swift; sourceTree = "<group>"; };
 		FAF04F94280EDA6D00F7E27F /* MenuTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTabBarController.swift; sourceTree = "<group>"; };
 		FAF04F9B280EDB8200F7E27F /* TodoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoTableViewCell.swift; sourceTree = "<group>"; };
 		FAF04F9C280EDB8200F7E27F /* TodoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TodoTableViewCell.xib; sourceTree = "<group>"; };
@@ -145,9 +147,6 @@
 				ACF41A8F280EB24F001B9B10 /* Resource */,
 				ACF41A8B280EB1EA001B9B10 /* Shared */,
 				537BDA4123C43B8C001EF4B3 /* AppDelegate.swift */,
-				537BDA5F23C44412001EF4B3 /* MasterTabBarController.swift */,
-				537BDA5B23C43DAF001EF4B3 /* ThirdViewController.swift */,
-				537BDA5923C43D9F001EF4B3 /* ActionViewController.swift */,
 				537BDA4523C43B8C001EF4B3 /* Main.storyboard */,
 				537BDA4823C43B8D001EF4B3 /* Assets.xcassets */,
 				537BDA4A23C43B8D001EF4B3 /* LaunchScreen.storyboard */,
@@ -199,29 +198,31 @@
 		ACF41A98280EB3E1001B9B10 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				FA36331E2B87AC9800DE129B /* Meal */,
+				ACF41A99280EB3ED001B9B10 /* Ingredient */,
+				FAE546442B89C2DF00D27CE9 /* ListMeals */,
+				FA2543EE2B88F672000E7156 /* MealArea */,
+				FA2543E02B88E83F000E7156 /* MealCategories */,
+				FAE5464B2B89C45300D27CE9 /* MealDetail */,
 				FAF04F93280EDA4400F7E27F /* MenuTabbar */,
+				FA36331E2B87AC9800DE129B /* Search Meals */,
 				FAF04F90280ED9F900F7E27F /* Todos */,
-				ACF41A99280EB3ED001B9B10 /* Weather */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
 		};
-		ACF41A99280EB3ED001B9B10 /* Weather */ = {
+		ACF41A99280EB3ED001B9B10 /* Ingredient */ = {
 			isa = PBXGroup;
 			children = (
-				ACF41AA8280EB889001B9B10 /* Model */,
-				ACF41A9C280EB408001B9B10 /* View */,
 				ACF41A9B280EB3FF001B9B10 /* Controller */,
 				ACF41A9A280EB3F5001B9B10 /* ViewModel */,
 			);
-			path = Weather;
+			path = Ingredient;
 			sourceTree = "<group>";
 		};
 		ACF41A9A280EB3F5001B9B10 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				ACF41AA6280EB55B001B9B10 /* WeatherViewModel.swift */,
+				ACF41AA6280EB55B001B9B10 /* MealIngredientViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -229,35 +230,9 @@
 		ACF41A9B280EB3FF001B9B10 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				ACF41A9D280EB438001B9B10 /* WeatherViewController.swift */,
+				ACF41A9D280EB438001B9B10 /* MealIngredientViewController.swift */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		ACF41A9C280EB408001B9B10 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				ACF41A9F280EB449001B9B10 /* WeatherTableViewCell */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		ACF41A9F280EB449001B9B10 /* WeatherTableViewCell */ = {
-			isa = PBXGroup;
-			children = (
-				ACF41AA0280EB462001B9B10 /* WeatherTableViewCell.swift */,
-				ACF41AA1280EB462001B9B10 /* WeatherTableViewCell.xib */,
-			);
-			path = WeatherTableViewCell;
-			sourceTree = "<group>";
-		};
-		ACF41AA8280EB889001B9B10 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				ACF41AA9280EB892001B9B10 /* IPLookupAPIModel.swift */,
-				ACF41AAB280EBDF0001B9B10 /* ForecastWeatherAPIModel.swift */,
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		DD89AE29CB39A69432D0FAB6 /* Pods */ = {
@@ -277,6 +252,56 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		FA2543E02B88E83F000E7156 /* MealCategories */ = {
+			isa = PBXGroup;
+			children = (
+				FA2543E42B88E8EE000E7156 /* ViewModel */,
+				FA2543E12B88E888000E7156 /* Controller */,
+			);
+			path = MealCategories;
+			sourceTree = "<group>";
+		};
+		FA2543E12B88E888000E7156 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FA2543E22B88E8A0000E7156 /* MealCategoriesViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FA2543E42B88E8EE000E7156 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FA2543E52B88E8FF000E7156 /* MealCategoriesViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FA2543EE2B88F672000E7156 /* MealArea */ = {
+			isa = PBXGroup;
+			children = (
+				FA2543F22B88F739000E7156 /* ViewModel */,
+				FA2543EF2B88F67A000E7156 /* Controller */,
+			);
+			path = MealArea;
+			sourceTree = "<group>";
+		};
+		FA2543EF2B88F67A000E7156 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FA2543F02B88F68E000E7156 /* MealAreaViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FA2543F22B88F739000E7156 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FA2543F32B88F746000E7156 /* MealAreaViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		FA28055C2B862636008EC739 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -285,7 +310,7 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		FA36331E2B87AC9800DE129B /* Meal */ = {
+		FA36331E2B87AC9800DE129B /* Search Meals */ = {
 			isa = PBXGroup;
 			children = (
 				FA3633372B87B9D000DE129B /* View */,
@@ -293,14 +318,13 @@
 				FA36332F2B87B3DD00DE129B /* ViewModel */,
 				FA36331F2B87ACA300DE129B /* Controller */,
 			);
-			path = Meal;
+			path = "Search Meals";
 			sourceTree = "<group>";
 		};
 		FA36331F2B87ACA300DE129B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
 				FA3633202B87ACD400DE129B /* MealViewController.swift */,
-				FA5E91162B886EF500FA1BA2 /* MealDetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -365,6 +389,64 @@
 			path = TextField;
 			sourceTree = "<group>";
 		};
+		FACBA9CC2B88FC78006FC787 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FACBA9CD2B88FC8E006FC787 /* TabbarTitle.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FAE546442B89C2DF00D27CE9 /* ListMeals */ = {
+			isa = PBXGroup;
+			children = (
+				FAE546482B89C30800D27CE9 /* ViewModel */,
+				FAE546452B89C2EE00D27CE9 /* Controller */,
+			);
+			path = ListMeals;
+			sourceTree = "<group>";
+		};
+		FAE546452B89C2EE00D27CE9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FAE546462B89C2FF00D27CE9 /* ListMealsViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FAE546482B89C30800D27CE9 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FAE546492B89C32600D27CE9 /* ListMealsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FAE5464B2B89C45300D27CE9 /* MealDetail */ = {
+			isa = PBXGroup;
+			children = (
+				FAE5464F2B89C49E00D27CE9 /* ViewModel */,
+				FAE5464C2B89C45C00D27CE9 /* Controller */,
+			);
+			path = MealDetail;
+			sourceTree = "<group>";
+		};
+		FAE5464C2B89C45C00D27CE9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FAE5464D2B89C46A00D27CE9 /* MealDetailViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FAE5464F2B89C49E00D27CE9 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FAE546502B89C4B300D27CE9 /* MealDetailViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		FAF04F90280ED9F900F7E27F /* Todos */ = {
 			isa = PBXGroup;
 			children = (
@@ -380,6 +462,7 @@
 		FAF04F93280EDA4400F7E27F /* MenuTabbar */ = {
 			isa = PBXGroup;
 			children = (
+				FACBA9CC2B88FC78006FC787 /* Model */,
 				FAF04F94280EDA6D00F7E27F /* MenuTabBarController.swift */,
 			);
 			path = MenuTabbar;
@@ -526,7 +609,6 @@
 			files = (
 				537BDA4C23C43B8D001EF4B3 /* LaunchScreen.storyboard in Resources */,
 				FAF04F9E280EDB8200F7E27F /* TodoTableViewCell.xib in Resources */,
-				ACF41AA3280EB462001B9B10 /* WeatherTableViewCell.xib in Resources */,
 				537BDA4923C43B8D001EF4B3 /* Assets.xcassets in Resources */,
 				537BDA4723C43B8C001EF4B3 /* Main.storyboard in Resources */,
 			);
@@ -600,39 +682,41 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ACF41AA2280EB462001B9B10 /* WeatherTableViewCell.swift in Sources */,
 				FACB5C752B85CB59007166D6 /* R.generated.swift in Sources */,
-				FA5E91172B886EF500FA1BA2 /* MealDetailViewController.swift in Sources */,
 				FAF04FAE280EFAFA00F7E27F /* TodoInfoViewModel.swift in Sources */,
 				FACB5C792B85D34E007166D6 /* BaseTextField.swift in Sources */,
 				FAF9982D2B84FC0900FA40E8 /* BaseViewController.swift in Sources */,
+				FAE5464E2B89C46A00D27CE9 /* MealDetailViewController.swift in Sources */,
+				FA2543F42B88F746000E7156 /* MealAreaViewModel.swift in Sources */,
 				FA3633292B87AF5B00DE129B /* ApiResponse.swift in Sources */,
-				537BDA5A23C43D9F001EF4B3 /* ActionViewController.swift in Sources */,
 				FAF04F9D280EDB8200F7E27F /* TodoTableViewCell.swift in Sources */,
 				FAF04F95280EDA6D00F7E27F /* MenuTabBarController.swift in Sources */,
 				FA5E91192B888E5800FA1BA2 /* CustomLoadingView.swift in Sources */,
-				ACF41AA7280EB55B001B9B10 /* WeatherViewModel.swift in Sources */,
+				ACF41AA7280EB55B001B9B10 /* MealIngredientViewModel.swift in Sources */,
+				FAE546512B89C4B300D27CE9 /* MealDetailViewModel.swift in Sources */,
 				FA3633252B87AE6600DE129B /* MealAPI.swift in Sources */,
 				FA3633312B87B3F400DE129B /* MealViewModel.swift in Sources */,
-				537BDA6023C44412001EF4B3 /* MasterTabBarController.swift in Sources */,
 				FAF04FA6280EF83200F7E27F /* DataManager.swift in Sources */,
 				FAF04FA9280EF87D00F7E27F /* TodoModel.swift in Sources */,
 				ACF41A97280EB365001B9B10 /* Identifier.swift in Sources */,
 				537BDA4223C43B8C001EF4B3 /* AppDelegate.swift in Sources */,
-				537BDA5C23C43DAF001EF4B3 /* ThirdViewController.swift in Sources */,
 				FAF04FA3280EDEB800F7E27F /* HomeTodosViewController.swift in Sources */,
 				FA36332C2B87AFF100DE129B /* Constans.swift in Sources */,
-				ACF41AAC280EBDF0001B9B10 /* ForecastWeatherAPIModel.swift in Sources */,
+				FACBA9CE2B88FC8E006FC787 /* TabbarTitle.swift in Sources */,
 				ACF41A94280EB2B9001B9B10 /* Storyboard+Extension.swift in Sources */,
 				FACB5C7B2B861350007166D6 /* String+Extension.swift in Sources */,
+				FA2543F12B88F68E000E7156 /* MealAreaViewController.swift in Sources */,
 				FA28055E2B862653008EC739 /* ShowAlertViewController.swift in Sources */,
+				FAE5464A2B89C32600D27CE9 /* ListMealsViewModel.swift in Sources */,
 				ACF41A8E280EB206001B9B10 /* Data+Extension.swift in Sources */,
 				FAF04FB0280EFF5500F7E27F /* HomeTodosViewModel.swift in Sources */,
 				FAF04FAB280EFAD100F7E27F /* TodoInfoViewController.swift in Sources */,
 				FA3633212B87ACD400DE129B /* MealViewController.swift in Sources */,
-				ACF41AAA280EB892001B9B10 /* IPLookupAPIModel.swift in Sources */,
 				FA3633392B87B9E600DE129B /* MealTableViewCell.swift in Sources */,
-				ACF41A9E280EB438001B9B10 /* WeatherViewController.swift in Sources */,
+				ACF41A9E280EB438001B9B10 /* MealIngredientViewController.swift in Sources */,
+				FAE546472B89C2FF00D27CE9 /* ListMealsViewController.swift in Sources */,
+				FA2543E32B88E8A0000E7156 /* MealCategoriesViewController.swift in Sources */,
+				FA2543E62B88E8FF000E7156 /* MealCategoriesViewModel.swift in Sources */,
 				ACF41AA5280EB49B001B9B10 /* UITableView+Extension.swift in Sources */,
 				FA3633332B87B53F00DE129B /* BaseViewModel.swift in Sources */,
 				FAF998302B8520CE00FA40E8 /* Utils.swift in Sources */,

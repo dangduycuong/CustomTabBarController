@@ -9,6 +9,10 @@
 import UIKit
 
 class CustomLoadingView: UIView {
+    lazy var containerView: UIView = {
+        let view = UIView()
+        return view
+    }()
     
     var spinner = UIActivityIndicatorView(style: .large)
     
@@ -31,9 +35,16 @@ class CustomLoadingView: UIView {
         if spinner.isAnimating {
             return
         }
-        
-        self.layout(spinner)
+        self.layout(containerView)
             .center()
+            .width(88)
+            .height(88)
+        containerView.layer.cornerRadius = 6
+        containerView.backgroundColor = UIColor.black
+        
+        containerView.layout(spinner)
+            .center()
+        
         spinner.color = UIColor.white
         spinner.hidesWhenStopped = true
         spinner.startAnimating()

@@ -19,10 +19,10 @@ class MenuTabBarController: UITabBarController, UITabBarControllerDelegate {
      }
      */
     var homeViewController: HomeTodosViewController!
-    var secondViewController: MealViewController!
-    var actionViewController: ActionViewController!
-    var thirdViewController: ThirdViewController!
-    var fourthViewController: WeatherViewController!
+    var mealViewController: MealViewController!
+    var mealCategories: MealCategoriesViewController!
+    var mealAreaViewController: MealAreaViewController!
+    var mealIngredientViewController: MealIngredientViewController!
     
     override func loadView() {
         super.loadView()
@@ -32,29 +32,26 @@ class MenuTabBarController: UITabBarController, UITabBarControllerDelegate {
     override func viewDidLoad(){
         super.viewDidLoad()
         self.delegate = self
-        let action = storyboard?.instantiateViewController(withIdentifier: "ActionViewController") as! ActionViewController
         
-        let home = HomeTodosViewController()
-        homeViewController = home
-        secondViewController = MealViewController()
-        actionViewController = action
-        thirdViewController = ThirdViewController()
+        homeViewController = HomeTodosViewController()
+        mealViewController = MealViewController()
+        mealCategories = MealCategoriesViewController()
+        mealAreaViewController = MealAreaViewController()
+        mealIngredientViewController = MealIngredientViewController()
         
-        let weather = WeatherViewController()
-        fourthViewController = weather
         
         homeViewController.tabBarItem.image = UIImage(named: "home")
-        homeViewController.tabBarItem.selectedImage =
-        UIImage(named: "home-selected")
-        secondViewController.tabBarItem.image = UIImage(named: "second")
-        secondViewController.tabBarItem.selectedImage = UIImage(named: "second-selected")
-        actionViewController.tabBarItem.image = UIImage(named: "action")
-        actionViewController.tabBarItem.selectedImage = UIImage(named: "action-selected")
-        thirdViewController.tabBarItem.image = UIImage(named: "third")
-        thirdViewController.tabBarItem.selectedImage = UIImage(named: "third-selected")
-        fourthViewController.tabBarItem.image = UIImage(named: "fourth")
-        fourthViewController.tabBarItem.selectedImage = UIImage(named: "fourth-selected")
-        viewControllers = [homeViewController, secondViewController, actionViewController, thirdViewController, fourthViewController]
+        homeViewController.tabBarItem.selectedImage = UIImage(named: "home-selected")
+        mealViewController.tabBarItem.image = UIImage(named: "second")
+        mealViewController.tabBarItem.selectedImage = UIImage(named: "second-selected")
+        mealCategories.tabBarItem.image = UIImage(named: "action")
+        mealCategories.tabBarItem.selectedImage = UIImage(named: "action-selected")
+        mealAreaViewController.tabBarItem.image = UIImage(named: "third")
+        mealAreaViewController.tabBarItem.selectedImage = UIImage(named: "third-selected")
+        mealIngredientViewController.tabBarItem.image = UIImage(named: "fourth")
+        mealIngredientViewController.tabBarItem.selectedImage = UIImage(named: "fourth-selected")
+        
+        viewControllers = [homeViewController, mealViewController, mealCategories, mealAreaViewController, mealIngredientViewController]
         
         for i in 0..<tabBar.items!.count {
             tabBar.items![i].title = TabbarTitle.all[i].text
@@ -82,29 +79,4 @@ class MenuTabBarController: UITabBarController, UITabBarControllerDelegate {
     
 }
 
-enum TabbarTitle {
-    case home
-    case second
-    case action
-    case third
-    case fourth
-    
-    static let all = [home, second, action, third, fourth]
-    
-    var text: String {
-        get {
-            switch self {
-            case .home:
-                return "Home"
-            case .second:
-                return "Meals"
-            case .action:
-                return "action"
-            case .third:
-                return "third"
-            case .fourth:
-                return "fourth"
-            }
-        }
-    }
-}
+

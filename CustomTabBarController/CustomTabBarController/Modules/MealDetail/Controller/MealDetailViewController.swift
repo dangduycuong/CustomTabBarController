@@ -2,7 +2,7 @@
 //  MealDetailViewController.swift
 //  CustomTabBarController
 //
-//  Created by cuongdd on 23/02/2024.
+//  Created by cuongdd on 24/02/2024.
 //  Copyright © 2024 Ngô Bảo Châu. All rights reserved.
 //
 
@@ -34,7 +34,7 @@ class MealDetailViewController: BaseViewController {
     }()
     
     var mealModel: MealModel?
-    private var viewModel = MealViewModel()
+    private var viewModel = MealDetailViewModel()
     
     override func loadView() {
         super.loadView()
@@ -53,27 +53,27 @@ class MealDetailViewController: BaseViewController {
         viewModel.mealDetailDataSource.skip(1).observeOn(MainScheduler.instance).subscribe(onNext: { [weak self] meal in
             guard let `self` = self else { return }
             self.mealModel = meal
-            self.fillData()
+            
             
             let ingredientVStackView = UIStackView()
             ingredientVStackView.axis = .vertical
             ingredientVStackView.distribution = .equalSpacing
             ingredientVStackView.alignment = .fill
+            ingredientVStackView.spacing = 8
             
             let measureVStackView = UIStackView()
             measureVStackView.axis = .vertical
             measureVStackView.distribution = .equalSpacing
             measureVStackView.alignment = .fill
+            measureVStackView.spacing = 8
             
             mealView.layout(ingredientVStackView)
-                .top(mealImageView)
-                .after(mealImageView, 8)
-                .bottom(mealImageView)
+                .below(mealImageView, 16)
+                .left(16)
             
             mealView.layout(measureVStackView)
-                .top(mealImageView)
+                .top(ingredientVStackView)
                 .after(ingredientVStackView, 8)
-                .bottom(mealImageView)
             
             for i in 0..<self.viewModel.ingredients.count {
                 let label = UILabel()
@@ -88,6 +88,14 @@ class MealDetailViewController: BaseViewController {
                 label.font = UIFont.systemFont(ofSize: 20)
                 measureVStackView.addArrangedSubview(label)
             }
+            
+            self.mealView.layout(self.descriptionLabel)
+                .below(ingredientVStackView, 16)
+                .left(16)
+                .bottom(16)
+                .right(16)
+            self.descriptionLabel.numberOfLines = 0
+            self.fillData()
             
         }).disposed(by: disposeBag)
     }
@@ -127,12 +135,7 @@ class MealDetailViewController: BaseViewController {
             .aspect(1.0)
         
         mealImageView.layoutIfNeeded()
-        mealView.layout(descriptionLabel)
-            .below(mealImageView, 16)
-            .left(16)
-            .bottom(16)
-            .right(16)
-        descriptionLabel.numberOfLines = 0
+        
     }
     
     private func fillData() {

@@ -87,33 +87,6 @@
             </objects>
             <point key="canvasLocation" x="1733.3333333333335" y="25.446428571428569"/>
         </scene>
-        <!--Action View Controller-->
-        <scene sceneID="FhD-Yd-KGA">
-            <objects>
-                <viewController storyboardIdentifier="ActionViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="F58-pj-Zjg" customClass="ActionViewController" customModule="CustomTabBarController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="I3Q-lZ-z1g">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uzQ-bf-77m">
-                                <rect key="frame" x="8" y="56" width="398" height="448"/>
-                                <color key="backgroundColor" red="0.27661025160000002" green="1" blue="0.18593380000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </view>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="nCm-Ey-vEB"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="uzQ-bf-77m" firstAttribute="leading" secondItem="nCm-Ey-vEB" secondAttribute="leading" constant="8" id="9bA-LX-M5K"/>
-                            <constraint firstItem="uzQ-bf-77m" firstAttribute="height" secondItem="I3Q-lZ-z1g" secondAttribute="height" multiplier="1/2" id="ebQ-Hh-nR7"/>
-                            <constraint firstItem="uzQ-bf-77m" firstAttribute="top" secondItem="nCm-Ey-vEB" secondAttribute="top" constant="8" id="owS-hR-axO"/>
-                            <constraint firstItem="nCm-Ey-vEB" firstAttribute="trailing" secondItem="uzQ-bf-77m" secondAttribute="trailing" constant="8" id="yuX-rR-17H"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="QUF-KJ-C3K" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3494.202898550725" y="14.732142857142856"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="6xq-xg-ZmU">
             <objects>

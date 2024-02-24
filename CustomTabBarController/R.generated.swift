@@ -78,15 +78,12 @@ struct _R {
     var thirdSelected: RswiftResources.ImageResource { .init(name: "third-selected", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
   }
 
-  /// This `_R.nib` struct is generated, and contains static references to 2 nibs.
+  /// This `_R.nib` struct is generated, and contains static references to 1 nibs.
   struct nib {
     let bundle: Foundation.Bundle
 
     /// Nib `TodoTableViewCell`.
     var todoTableViewCell: RswiftResources.NibReference<TodoTableViewCell> { .init(name: "TodoTableViewCell", bundle: bundle) }
-
-    /// Nib `WeatherTableViewCell`.
-    var weatherTableViewCell: RswiftResources.NibReference<WeatherTableViewCell> { .init(name: "WeatherTableViewCell", bundle: bundle) }
 
     func validate() throws {
 
@@ -130,13 +127,9 @@ struct _R {
       let bundle: Foundation.Bundle
 
       let name = "Main"
-
-      var actionViewController: RswiftResources.StoryboardViewControllerIdentifier<ActionViewController> { .init(identifier: "ActionViewController", storyboard: name, bundle: bundle) }
-
       func validate() throws {
         if UIKit.UIImage(named: "home", in: bundle, compatibleWith: nil) == nil { throw RswiftResources.ValidationError("[R.swift] Image named 'home' is used in storyboard 'Main', but couldn't be loaded.") }
         if UIKit.UIImage(named: "third-selected", in: bundle, compatibleWith: nil) == nil { throw RswiftResources.ValidationError("[R.swift] Image named 'third-selected' is used in storyboard 'Main', but couldn't be loaded.") }
-        if actionViewController() == nil { throw RswiftResources.ValidationError("[R.swift] ViewController with identifier 'actionViewController' could not be loaded from storyboard 'Main' as 'ActionViewController'.") }
       }
     }
   }

@@ -62,6 +62,7 @@ class MealTableViewCell: UITableViewCell {
         containerView.layout(titleLabel)
             .top(8)
             .left(8)
+            .before(thumbnailImageView, 8)
         titleLabel.font = UIFont.boldSystemFont(ofSize: 20)
         
         containerView.layout(descriptionLabel)
@@ -75,8 +76,8 @@ class MealTableViewCell: UITableViewCell {
     
     func configure(title: String?, description: String?, strMealThumb: String?) {
         // Configure UI elements with data
-        titleLabel.text = title
-        descriptionLabel.text = description
+        titleLabel.text = title ?? " "
+        descriptionLabel.text = description ?? " "
         
         
         guard let url = URL(string: strMealThumb ?? "https://example.com/high_resolution_image.png") else { return }

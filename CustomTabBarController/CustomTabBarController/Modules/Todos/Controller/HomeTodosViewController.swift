@@ -75,7 +75,7 @@ class HomeTodosViewController: BaseViewController {
         view.layout(addButton)
             .right(16)
             .bottomSafe(16)
-            .width(44).height(44)
+            .width(40).height(40)
         
         let image = R.image.add()?.withRenderingMode(.alwaysTemplate)
         

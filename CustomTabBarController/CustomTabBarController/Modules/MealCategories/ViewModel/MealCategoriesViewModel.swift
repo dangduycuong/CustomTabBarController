@@ -10,6 +10,29 @@ import Foundation
 
 class MealCategoriesViewModel: BaseViewModel {
     var mealCategoriesDataSource = BehaviorRelay<[MealModel]>(value: [])
+    var categoriesSource = [MealModel]()
+    
+    func filterMeal(searchText: String?) {
+        let keyWord: String = (searchText ?? "").lowercased()
+        var categories = [MealModel]()
+        if keyWord == "" {
+            categories = categoriesSource
+        } else {
+            categories = categoriesSource.filter { (meal: MealModel) in
+                let strIngredient = meal.strCategory?.lowercased().unaccent()
+                let strCategoryDescription = meal.strCategoryDescription?.lowercased().unaccent()
+                
+                if strIngredient?.range(of: keyWord) != nil {
+                    return true
+                }
+                if strCategoryDescription?.range(of: keyWord) != nil {
+                    return true
+                }
+                return false
+            }
+        }
+        mealCategoriesDataSource.accept(categories)
+    }
     
     func getMealCategories() {
         Utils.showLoadingIndicator()
@@ -18,6 +41,7 @@ class MealCategoriesViewModel: BaseViewModel {
             if let data = response.data {
                 if let array = data["categories"].array {
                     let categories = array.map { MealModel(json: $0) }
+                    self.categoriesSource = categories
                     self.mealCategoriesDataSource.accept(categories)
                 }
             }

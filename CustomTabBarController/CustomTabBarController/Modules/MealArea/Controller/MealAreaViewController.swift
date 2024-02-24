@@ -9,6 +9,19 @@
 import UIKit
 
 class MealAreaViewController: BaseViewController {
+    private lazy var searchTextField: BaseTextField = {
+        let textField = BaseTextField()
+        textField.layer.borderWidth = 1
+        textField.layer.borderColor = UIColor.green.cgColor
+        textField.layer.cornerRadius = 4
+        textField.font = UIFont.systemFont(ofSize: 20)
+        textField.clearButtonMode = .whileEditing
+        textField.delegate = self
+        textField.placeholder = "Filter by main ingredient"
+        
+        return textField
+    }()
+    
     private lazy var tableView: UITableView = {
         let tableView = UITableView()
         tableView.delegate = self
@@ -51,8 +64,15 @@ class MealAreaViewController: BaseViewController {
         addBackground()
         
         addTitle("Meals Area")
-        view.layout(tableView)
+        
+        view.layout(searchTextField)
             .below(titleLabel, 32)
+            .left(16)
+            .right(16)
+            .height(40)
+        
+        view.layout(tableView)
+            .below(searchTextField, 16)
             .left()
             .bottomSafe()
             .right()
@@ -82,7 +102,7 @@ extension MealAreaViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(cellType: MealTableViewCell.self, forIndexPath: indexPath)
         let meal = viewModel.mealsDataSource.value[indexPath.row]
-        cell.configure(title: meal.strArea, description: meal.strInstructions, strMealThumb: meal.strMealThumb)
+        cell.configure(title: meal.strArea, description: meal.strInstructions, strMealThumb: meal.strMealThumb, keyWord: searchTextField.text ?? "")
         
         return cell
     }
@@ -92,5 +112,11 @@ extension MealAreaViewController: UITableViewDelegate, UITableViewDataSource {
         vc.mealModel = viewModel.mealsDataSource.value[indexPath.row]
         vc.mealType = .area
         navigationController?.pushViewController(vc, animated: true)
+    }
+}
+
+extension MealAreaViewController: UITextFieldDelegate {
+    func textFieldDidChangeSelection(_ textField: UITextField) {
+        viewModel.filterMeal(searchText: searchTextField.text)
     }
 }

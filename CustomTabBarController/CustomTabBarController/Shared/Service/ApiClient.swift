@@ -51,16 +51,16 @@ class ApiClient {
             return defaultEndpoint
         }
         
-        var plugins: [PluginType] = []
+        //        var plugins: [PluginType] = []
 #if DEBUG
         //        plugins.append(NetworkLoggerPlugin(verbose: true, responseDataFormatter: JSONResponseDataFormatter))
 #endif
         
         let provider = MoyaProvider<T>(endpointClosure: endpointClosure, plugins: [
             NetworkLoggerPlugin(configuration: .init(formatter: .init(), output: { (target, array) in
-                if let log = array.first {
-                    print(log)
-                }
+                //                if let log = array.first {
+                //                    print(log)
+                //                }
             }, logOptions: .formatRequestAscURL))
         ])
         
@@ -127,9 +127,9 @@ class ApiClient {
                 switch result {
                 case let .success(moyaResponse):
                     let resp = ApiResponse(response: moyaResponse)
-                    if let data = resp.data {
-                        print("----json response:\n", data as Any)
-                    }
+                    //                    if let data = resp.data {
+                    //                        print("----json response:\n", data as Any)
+                    //                    }
                     
                     if moyaResponse.isUnauthenticated {
                         self.cancelAllRequests()

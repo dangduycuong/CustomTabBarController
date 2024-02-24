@@ -10,6 +10,31 @@ import Foundation
 
 class ListMealsViewModel: BaseViewModel {
     var mealsDataSource = BehaviorRelay<[MealModel]>(value: [])
+    var mealsSource = [MealModel]()
+    
+    func filterMeal(searchText: String?) {
+        let keyWord: String = (searchText ?? "").lowercased()
+        var meals = [MealModel]()
+        if keyWord == "" {
+            meals = mealsSource
+        } else {
+            meals = mealsSource.filter { (meal: MealModel) in
+                let strMeal = meal.strMeal?.lowercased().unaccent()
+                let strInstructions = meal.strInstructions?.lowercased().unaccent()
+                
+                if strMeal?.range(of: keyWord) != nil {
+                    return true
+                }
+                
+                if strInstructions?.range(of: keyWord) != nil {
+                    return true
+                }
+                
+                return false
+            }
+        }
+        mealsDataSource.accept(meals)
+    }
     
     func getMealsByCategory(mealCategory: String?) {
         Utils.showLoadingIndicator()
@@ -20,6 +45,7 @@ class ListMealsViewModel: BaseViewModel {
             if let data = response.data {
                 if let array = data["meals"].array {
                     let meals = array.map { MealModel(json: $0) }
+                    self.mealsSource = meals
                     self.mealsDataSource.accept(meals)
                 }
             }
@@ -46,6 +72,7 @@ class ListMealsViewModel: BaseViewModel {
             if let data = response.data {
                 if let array = data["meals"].array {
                     let meals = array.map { MealModel(json: $0) }
+                    self.mealsSource = meals
                     self.mealsDataSource.accept(meals)
                 }
             }
@@ -72,6 +99,7 @@ class ListMealsViewModel: BaseViewModel {
             if let data = response.data {
                 if let array = data["meals"].array {
                     let meals = array.map { MealModel(json: $0) }
+                    self.mealsSource = meals
                     self.mealsDataSource.accept(meals)
                 }
             }

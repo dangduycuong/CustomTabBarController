@@ -10,6 +10,25 @@ import Foundation
 
 class MealIngredientViewModel: BaseViewModel {
     var ingredientsDataSource = BehaviorRelay<[MealModel]>(value: [])
+    private var ingredientsSource = [MealModel]()
+    
+    func filterMeal(searchText: String?) {
+        let keyWord: String = (searchText ?? "").lowercased()
+        var ingredients = [MealModel]()
+        if keyWord == "" {
+            ingredients = ingredientsSource
+        } else {
+            ingredients = ingredientsSource.filter { (meal: MealModel) in
+                if let strIngredient = meal.strIngredient?.lowercased().unaccent() {
+                    if strIngredient.range(of: keyWord) != nil {
+                        return true
+                    }
+                }
+                return false
+            }
+        }
+        ingredientsDataSource.accept(ingredients)
+    }
     
     func getListAllIngredients() {
         Utils.showLoadingIndicator()
@@ -20,6 +39,7 @@ class MealIngredientViewModel: BaseViewModel {
             if let data = response.data {
                 if let array = data["meals"].array {
                     let ingredients = array.map { MealModel(json: $0) }
+                    self.ingredientsSource = ingredients
                     self.ingredientsDataSource.accept(ingredients)
                 }
             }

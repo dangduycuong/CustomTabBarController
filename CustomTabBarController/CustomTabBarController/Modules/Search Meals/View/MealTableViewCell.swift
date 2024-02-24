@@ -13,7 +13,7 @@ class MealTableViewCell: UITableViewCell {
     
     // MARK: - Properties
     private lazy var containerView: UIView = {
-       let view = UIView()
+        let view = UIView()
         return view
     }()
     
@@ -74,11 +74,13 @@ class MealTableViewCell: UITableViewCell {
     
     // MARK: - Configure Cell
     
-    func configure(title: String?, description: String?, strMealThumb: String?) {
+    func configure(title: String?, description: String?, strMealThumb: String?, keyWord: String) {
         // Configure UI elements with data
-        titleLabel.text = title ?? " "
-        descriptionLabel.text = description ?? " "
+        let titleDisplay = title ?? " "
+        let descriptionDisplay = description ?? " "
         
+        hilightColor(textDisplay: titleDisplay, keyWord: keyWord, label: titleLabel, font: UIFont.boldSystemFont(ofSize: 20))
+        hilightColor(textDisplay: descriptionDisplay, keyWord: keyWord, label: descriptionLabel)
         
         guard let url = URL(string: strMealThumb ?? "https://example.com/high_resolution_image.png") else { return }
         let processor = DownsamplingImageProcessor(size: thumbnailImageView.bounds.size)
@@ -104,5 +106,41 @@ class MealTableViewCell: UITableViewCell {
         }
     }
     
+    private func hilightColor(textDisplay: String, keyWord: String, label: UILabel, font: UIFont? = UIFont.systemFont(ofSize: 20)) {
+        let rangeDescription = findRange(source: textDisplay.folded.lowercased(), textToFind: keyWord.folded.lowercased())
+        if rangeDescription.location != NSNotFound {
+            setColorTextLabel(string: textDisplay, range: rangeDescription, label: label)
+        } else {
+            let paragraphStyle = NSMutableParagraphStyle()
+            paragraphStyle.alignment = .left
+            paragraphStyle.lineSpacing = 6
+            let attributes: [NSAttributedString.Key: Any] = [
+                .font: font as Any,
+                .foregroundColor: UIColor.black,
+                .paragraphStyle: paragraphStyle
+            ]
+            label.attributedText = NSAttributedString(string: textDisplay, attributes: attributes)
+        }
+    }
+    
+    func findRange(source: String, textToFind: String) -> NSRange {
+        let string = NSMutableAttributedString(string: source.folded.lowercased())
+        
+        let range = string.mutableString.range(of: textToFind.folded.lowercased(), options: .caseInsensitive)
+        return range
+    }
+    
+    func setColorTextLabel(string: String, range: NSRange, label: UILabel) {
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.alignment = .left
+        paragraphStyle.lineSpacing = 6
+        let attributes: [NSAttributedString.Key: Any] = [
+            .paragraphStyle: paragraphStyle
+        ]
+        var myMutableString = NSMutableAttributedString()
+        myMutableString = NSMutableAttributedString(string: string, attributes: attributes)
+        myMutableString.addAttribute(NSAttributedString.Key.foregroundColor, value: UIColor.green, range: range)
+        label.attributedText = myMutableString
+    }
 }
 

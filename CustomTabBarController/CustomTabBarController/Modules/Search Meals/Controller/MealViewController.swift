@@ -105,7 +105,7 @@ extension MealViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(cellType: MealTableViewCell.self, forIndexPath: indexPath)
         let meal = viewModel.mealsDataSource.value[indexPath.row]
-        cell.configure(title: meal.strMeal, description: meal.strInstructions, strMealThumb: meal.strMealThumb)
+        cell.configure(title: meal.strMeal, description: meal.strInstructions, strMealThumb: meal.strMealThumb, keyWord: "")
         return cell
     }
     

@@ -17,10 +17,21 @@ class MealTableViewCell: UITableViewCell {
         return view
     }()
     
+    private lazy var thumbnailImageView: UIImageView = {
+        let imageView = UIImageView()
+        return imageView
+    }()
+    
     // Custom properties for your cell's UI elements
-    let titleLabel = UILabel()
-    let descriptionLabel = UILabel()
-    let thumbnailImageView = UIImageView()
+    private lazy var titleLabel: UILabel = {
+        let label = UILabel()
+        return label
+    }()
+    
+    private lazy var descriptionLabel: UILabel = {
+        let label = UILabel()
+        return label
+    }()
     
     // MARK: - Initializers
     
@@ -53,38 +64,49 @@ class MealTableViewCell: UITableViewCell {
         containerView.layer.borderWidth = 1
         containerView.layer.cornerRadius = 4
         
+        let vStackView = UIStackView()
+        vStackView.spacing = 8
+        vStackView.axis = .vertical
+        vStackView.alignment = .fill
+        vStackView.distribution = .fill
+        
+        vStackView.addArrangedSubview(titleLabel)
+        vStackView.addArrangedSubview(descriptionLabel)
+        
+        containerView.layout(vStackView)
+            .left(8)
+            .centerY()
+        
         containerView.layout(thumbnailImageView)
-            .top(8)
-            .bottom(8)
-            .right(8)
-            .width(48)
-        
-        containerView.layout(titleLabel)
-            .top(8)
-            .left(8)
-            .before(thumbnailImageView, 8)
-        titleLabel.font = UIFont.boldSystemFont(ofSize: 20)
-        
-        containerView.layout(descriptionLabel)
-            .left(8)
-            .bottom(8)
-            .before(thumbnailImageView, 8)
-        descriptionLabel.font = UIFont.systemFont(ofSize: 20)
+            .top(4)
+            .after(vStackView, 8)
+            .bottom(4)
+            .right(4)
+            .aspect(1)
     }
     
     // MARK: - Configure Cell
     
     func configure(title: String?, description: String?, strMealThumb: String?, keyWord: String) {
         // Configure UI elements with data
-        let titleDisplay = title ?? " "
-        let descriptionDisplay = description ?? " "
+        if let title = title {
+            titleLabel.isHidden = false
+            hilightText(searchText: keyWord, content: title, label: titleLabel, color: UIColor.black, font: UIFont.boldSystemFont(ofSize: 20))
+        } else {
+            titleLabel.isHidden = true
+        }
         
-        hilightColor(textDisplay: titleDisplay, keyWord: keyWord, label: titleLabel, font: UIFont.boldSystemFont(ofSize: 20))
-        hilightColor(textDisplay: descriptionDisplay, keyWord: keyWord, label: descriptionLabel)
+        if let description = description {
+            descriptionLabel.isHidden = false
+            hilightText(searchText: keyWord, content: description, label: descriptionLabel, color: UIColor.black, font: UIFont.systemFont(ofSize: 20))
+        } else {
+            descriptionLabel.isHidden = true
+        }
         
-        guard let url = URL(string: strMealThumb ?? "https://example.com/high_resolution_image.png") else { return }
+        guard let strMealThumb = strMealThumb else { return }
+        guard let url = URL(string: strMealThumb) else { return }
         let processor = DownsamplingImageProcessor(size: thumbnailImageView.bounds.size)
-        |> RoundCornerImageProcessor(cornerRadius: 20)
+        |> RoundCornerImageProcessor(cornerRadius: thumbnailImageView.bounds.size.width / 2)
         thumbnailImageView.kf.indicatorType = .activity
         thumbnailImageView.kf.setImage(
             with: url,
@@ -106,20 +128,23 @@ class MealTableViewCell: UITableViewCell {
         }
     }
     
-    private func hilightColor(textDisplay: String, keyWord: String, label: UILabel, font: UIFont? = UIFont.systemFont(ofSize: 20)) {
-        let rangeDescription = findRange(source: textDisplay.folded.lowercased(), textToFind: keyWord.folded.lowercased())
-        if rangeDescription.location != NSNotFound {
-            setColorTextLabel(string: textDisplay, range: rangeDescription, label: label)
+    private func hilightText(searchText: String?, content: String?, label: UILabel, color: UIColor, font: UIFont?) {
+        guard let content = content else { return }
+        guard let keyWord = searchText else { return }
+        let rangeContent = findRange(source: content , textToFind: keyWord.folded.lowercased())
+        if rangeContent.location != NSNotFound {
+            setColorTextLabel(string: content, range: rangeContent, label: label, color: color, font: font)
         } else {
             let paragraphStyle = NSMutableParagraphStyle()
-            paragraphStyle.alignment = .left
             paragraphStyle.lineSpacing = 6
-            let attributes: [NSAttributedString.Key: Any] = [
+            paragraphStyle.alignment = .left
+            let attributes: [NSAttributedString.Key : Any] = [
                 .font: font as Any,
-                .foregroundColor: UIColor.black,
-                .paragraphStyle: paragraphStyle
+                .paragraphStyle: paragraphStyle,
+                .foregroundColor: color
             ]
-            label.attributedText = NSAttributedString(string: textDisplay, attributes: attributes)
+            
+            label.attributedText = NSAttributedString(string: content, attributes: attributes)
         }
     }
     
@@ -130,12 +155,14 @@ class MealTableViewCell: UITableViewCell {
         return range
     }
     
-    func setColorTextLabel(string: String, range: NSRange, label: UILabel) {
+    func setColorTextLabel(string: String, range: NSRange, label: UILabel, color: UIColor, font: UIFont?) {
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.alignment = .left
         paragraphStyle.lineSpacing = 6
         let attributes: [NSAttributedString.Key: Any] = [
-            .paragraphStyle: paragraphStyle
+            .paragraphStyle: paragraphStyle,
+            .font: font as Any,
+            .foregroundColor: color
         ]
         var myMutableString = NSMutableAttributedString()
         myMutableString = NSMutableAttributedString(string: string, attributes: attributes)

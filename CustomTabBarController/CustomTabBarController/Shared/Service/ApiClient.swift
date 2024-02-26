@@ -127,9 +127,9 @@ class ApiClient {
                 switch result {
                 case let .success(moyaResponse):
                     let resp = ApiResponse(response: moyaResponse)
-                    //                    if let data = resp.data {
-                    //                        print("----json response:\n", data as Any)
-                    //                    }
+                    if let data = resp.data {
+                        print("----json response:\n", data as Any)
+                    }
                     
                     if moyaResponse.isUnauthenticated {
                         self.cancelAllRequests()

@@ -872,11 +872,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4LW34R6CMB;
 				INFOPLIST_FILE = CustomTabBarController/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Meals;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = CuongDD.CustomTabBarController;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = $SRCROOT/CustomTabBarController/Configuration/Header.h;
@@ -893,11 +895,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4LW34R6CMB;
 				INFOPLIST_FILE = CustomTabBarController/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Meals;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = CuongDD.CustomTabBarController;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = $SRCROOT/CustomTabBarController/Configuration/Header.h;
